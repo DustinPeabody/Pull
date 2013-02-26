@@ -2,5 +2,8 @@ Pull
 ====
 
 CSCI 4990 Vida Game-Shoot em up!
-dpeabody@uno.edu
-nsimpson@uno.edu
+### Emails
+
+Dustin Peabody - dpeabody@uno.edu
+Nathan Simpson - nsimpson@uno.edu
+Kyle Whittington - kwhittin@uno.edu
