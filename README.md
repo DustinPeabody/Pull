@@ -7,3 +7,4 @@ CSCI 4990 Vida Game-Shoot em up!
 Dustin Peabody - dpeabody@uno.edu
 Nathan Simpson - nsimpson@uno.edu
 Kyle Whittington - kwhittin@uno.edu
+James Bates - jlbates@uno.edu
