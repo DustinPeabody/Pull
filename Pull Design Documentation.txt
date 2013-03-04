@@ -1,0 +1,46 @@
+Pull Design Documentation
+
+View
+	Top-down
+
+Proposed Controls
+	W=forward
+	S=backward
+	A=left
+	D=right
+	Mouse movement aims the pull/throw cross-hair
+	Mouse 1 = Pull
+	Mouse 2 = Throw
+	Q=Cycle stored enemy ammo left
+	E=Cycle stored enemy ammo right
+	Spacebar=Boost or shield
+
+Full powerlist from enemies so far:
+	horizontal explosion
+	gravity well to draw enemies in
+	circular explosion
+
+Enemy Ideas
+	Enemies should probably attack in a manner that resembles the power they give when thrown
+		The circular explosion guy could fly up to and detonate near you
+		
+
+Visual Design
+	Futureistic look and feel
+		Space ship as main character
+		Pull mechanic acomplished by tractor beam
+		Scenery includes both space and land flights
+
+Game progression
+	After the tutorial level the game will branch into a multilevel design
+		So level 1 is complete now choose which level to do next
+		After all levels are done final boss level happens(maybe)
+	Killing each boss nets you some new power
+		Proposed powers
+			Shield
+			Split-shot(All thrown enemies split into two of that type when thrown)
+			Build-a-bomb(Combining any 3, 4 enemies generates a screen clearing bomb)
+			Boost
+
+	Killing a number of enemies causes the boss to spawn and attack
+
