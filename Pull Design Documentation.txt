@@ -15,26 +15,52 @@ Proposed Controls
 	E=Cycle stored enemy ammo right
 	Spacebar=Boost or shield
 
+Spaceship attributes
+	Can move along x and y axies
+	Left-click on an enemy to pull them into a power bar
+	Right-click to throw the first enemy from the power bar to where the pull cursor is
+	Ship has health bar. Can take a number of hits before losing a life. 3 seems like a good number
+
 Full powerlist from enemies so far:
-	horizontal explosion
-	gravity well to draw enemies in
-	circular explosion
+	Horizontal explosion
+	Vertical explosion
+	Gravity well to draw enemies in
+	Circular explosion
 
 Enemy Ideas
 	Enemies should probably attack in a manner that resembles the power they give when thrown
-		The circular explosion guy could fly up to and detonate near you
-		
+		Circular explosion guy:
+			Tries to fly up to the player's ship and detonates
+			Flies eraticaly, like a crazy kamikaze piolt
+
+		Carrier ship:
+			Releases a number of circular explosion guys
+			Can not be pulled, too big
+
+		Horizontal explosion guy:
+			Fires from the sides of the ships
+			Flies in straight line horizontaly accross the screen
+
+		Vertical explosion guy:
+			Flies from the top of the screen to the bottom
+			Fires his gun down in the same direction it moves
+
+		Gravity well dude:
+			Doesn't want to actually touch the player ship, instead flies near and activates a gravity well, pulling the players ship toward the Gravity well dude
+			Basicaly just messes with the player's ability to move and dodge enemy fire
 
 Visual Design
 	Futureistic look and feel
 		Space ship as main character
 		Pull mechanic acomplished by tractor beam
 		Scenery includes both space and land flights
+	Mouse is visible as a stylized cursor for aiming pulls
 
 Game progression
 	After the tutorial level the game will branch into a multilevel design
 		So level 1 is complete now choose which level to do next
-		After all levels are done final boss level happens(maybe)
+		After all levels are done final boss level happens
+
 	Killing each boss nets you some new power
 		Proposed powers
 			Shield
@@ -43,4 +69,5 @@ Game progression
 			Boost
 
 	Killing a number of enemies causes the boss to spawn and attack
+	Enemies fly-in in groups but not waves less galaga, more continuous 
 
