@@ -71,3 +71,21 @@ Game progression
 	Killing a number of enemies causes the boss to spawn and attack
 	Enemies fly-in in groups but not waves less galaga, more continuous 
 
+
+Level - 1
+	First fully playable level
+		Starts off with the player ship flying forward on a space background - 
+			Stars, black etc. Really simple background
+		About 5 seconds of continuous flight, when suddenly, ENEMIES!
+			group of 3 circular explosion guys
+		3 more seconds and then more... ENEMIES!
+			1 circular explosion guy and 2 vertical explosion guys
+		3 more seconds ... ENEMIES!
+			1 vertical explosion guy 2 horizontal explosion guy
+		3 more seconds ENEMIES!!!
+			1 gravity well and 3 circular explosion guys
+	Now all the enemies have been introduced so BIG WAVES
+		5 second break followed by
+			2 circular explosion guys, 2 vertical guys, 2 horizontal guys, 1 gravity well guy
+	From here on additional enemies continue to fall in 1-5 at a time. Keep the balance of numbers skewed toward more horizontal and vertical guys, then circular explosion, then gravity well guys.
+
