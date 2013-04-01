@@ -10,11 +10,5 @@
 
 @interface PlayerShip : GameObject {
 }
-//-(void) moveUp;
-//-(void) moveRight;
-//-(void) moveDown;
-//-(void) moveLeft;
-//-(void) resetVelocity;
 
--(void) moveToTheLeft;
 @end

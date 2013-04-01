@@ -16,7 +16,12 @@
 - (id) init {
   
   self = [super init];
-  if (!self) return NULL;
+  
+  //if successfully created
+  if (self) {
+    //set the speed
+    [self setHorizontalSpeed:ShipSpeed andVerticalSpeed:ShipSpeed];
+  }
   
   return self;
 }
@@ -30,24 +35,13 @@
   //calculate the next position
   CGPoint old_position = self.position;
   
-  float new_x = old_position.x + (ShipSpeed*velocity_x);
-  float new_y = old_position.y + (ShipSpeed*velocity.y);
+  float new_x = old_position.x + (_direction.x*_speed.x);
+  float new_y = old_position.y + (_direction.y*_speed.y);
   
-  if (velocity.x == -1) {
-    NSLog(@"move left");
-  }
-  else if (velocity.x == 1) {
-    NSLog(@"move right");
-  }
-  //now reset the velocity
-//  [self resetVelocity];
-  
+  //reset the direction
+  [self resetDirection];
   
   self.position = ccp(new_x,new_y);
 }
 
--(void) moveToTheLeft {
-  velocity = ccp(-1, velocity.y);
-  velocity_x = -1;
-}
 @end

@@ -57,7 +57,7 @@
       GameObject* game_object = (GameObject*)child;
       
       //if the object is scheduled for removal
-      if (game_object.isScheduledForRemove) {
+      if (game_object.isScheduledForRemoval) {
         game_objects_to_remove = [game_objects_to_remove arrayByAddingObject:child];
       }
     }
@@ -82,15 +82,14 @@
     {
       
       // left arrow pressed
-//      player_ship.velocity = ccp(-1,player_ship.velocity.y);
-//      [player_ship moveToTheLeft];
-      NSLog(@"Left arrow %f, %f",player_ship.velocity.x, player_ship.velocity_x);
+      [player_ship directLeft];
+      NSLog(@"Left arrow %f, %f",player_ship.speed.x, player_ship.speed.x);
     }
     
     if ( uc == NSRightArrowFunctionKey )
     {
       // right arrow pressed
-//      [player_ship moveRight];
+      [player_ship directRight];
     }
   }
   return YES;

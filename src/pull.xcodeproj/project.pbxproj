@@ -216,8 +216,6 @@
 		ADC7116D16FCA4A100277398 /* player_ship_prototype.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC7115D16FCA4A100277398 /* player_ship_prototype.png */; };
 		ADC7116E16FCA4A100277398 /* player_ship_prototype.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = ADC7116116FCA4A100277398 /* player_ship_prototype.ccbi */; };
 		ADC7116F16FCA4A100277398 /* level_prototype.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = ADC7116316FCA4A100277398 /* level_prototype.ccbi */; };
-		ADF3BA9A1709116F00E7357A /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3BA991709116F00E7357A /* Rectangle.m */; };
-		ADF3BA9D1709225400E7357A /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3BA9C1709225400E7357A /* Square.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -653,10 +651,6 @@
 		ADC7115D16FCA4A100277398 /* player_ship_prototype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_ship_prototype.png; sourceTree = "<group>"; };
 		ADC7116116FCA4A100277398 /* player_ship_prototype.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = player_ship_prototype.ccbi; sourceTree = "<group>"; };
 		ADC7116316FCA4A100277398 /* level_prototype.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = level_prototype.ccbi; sourceTree = "<group>"; };
-		ADF3BA981709116F00E7357A /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rectangle.h; path = Controllers/Objects/Rectangle.h; sourceTree = "<group>"; };
-		ADF3BA991709116F00E7357A /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rectangle.m; path = Controllers/Objects/Rectangle.m; sourceTree = "<group>"; };
-		ADF3BA9B1709225400E7357A /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Square.h; path = Controllers/Objects/Square.h; sourceTree = "<group>"; };
-		ADF3BA9C1709225400E7357A /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Square.m; path = Controllers/Objects/Square.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -692,10 +686,6 @@
 				AD00C91C1707BB15000F9FF9 /* GameObject.m */,
 				AD00C91E1707BC4A000F9FF9 /* PlayerShip.h */,
 				AD00C91F1707BC4A000F9FF9 /* PlayerShip.m */,
-				ADF3BA981709116F00E7357A /* Rectangle.h */,
-				ADF3BA991709116F00E7357A /* Rectangle.m */,
-				ADF3BA9B1709225400E7357A /* Square.h */,
-				ADF3BA9C1709225400E7357A /* Square.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1778,8 +1768,6 @@
 				AD00C91D1707BB15000F9FF9 /* GameObject.m in Sources */,
 				AD00C9201707BC4A000F9FF9 /* PlayerShip.m in Sources */,
 				AD00C9231707C9CD000F9FF9 /* Level.m in Sources */,
-				ADF3BA9A1709116F00E7357A /* Rectangle.m in Sources */,
-				ADF3BA9D1709225400E7357A /* Square.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

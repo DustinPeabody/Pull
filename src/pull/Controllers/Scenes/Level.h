@@ -8,14 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "Rectangle.h"
-#import "Square.h"
 
 @class PlayerShip;
 @interface Level : CCLayer {
   PlayerShip* player_ship;
-  Rectangle* rectangle;
-  Square* square;
 }
 
 @end

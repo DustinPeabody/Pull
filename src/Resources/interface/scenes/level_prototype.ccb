@@ -32,9 +32,9 @@
 				<key>displayName</key>
 				<string>PlayerShip</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>player_ship</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
