@@ -8,35 +8,38 @@
 
 
 #import "AppDelegate.h"
+#import "CCBReader.h"
 
 @implementation pullAppDelegate
-@synthesize window=window_, glView=glView_;
+@synthesize window=window_, glView=glView_, director=director_;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	CCDirectorMac *director = (CCDirectorMac*) [CCDirector sharedDirector];
-	
-	// enable FPS and SPF
-	[director setDisplayStats:YES];
-	
-	// connect the OpenGL view with the director
-	[director setView:glView_];
-
-	// EXPERIMENTAL stuff.
-	// 'Effects' don't work correctly when autoscale is turned on.
-	// Use kCCDirectorResize_NoScale if you don't want auto-scaling.
-	[director setResizeMode:kCCDirectorResize_AutoScale];
-	
-	// Enable "moving" mouse event. Default no.
-	[window_ setAcceptsMouseMovedEvents:NO];
-	
-	// Center main window
-	[window_ center];
-
-	CCScene *scene = [CCScene node];
-//	[scene addChild:[HelloWorldLayer node]];
-	
-	[director runWithScene:scene];
+  NSRect aFrame = [[NSScreen mainScreen] frame];
+  
+  CGSize winSize = CGSizeMake(720,480);
+  
+  CC_DIRECTOR_INIT(winSize);
+  [self.window showsResizeIndicator];
+  
+  CCDirectorMac *director = (CCDirectorMac*) [CCDirector sharedDirector];
+  [director setResizeMode:kCCDirectorResize_AutoScale];
+  [director setProjection:kCCDirectorProjection2D];
+  
+  // Enable "moving" mouse event. Default no.
+  [window_ setAcceptsMouseMovedEvents:YES];
+  [window_ setContentAspectRatio:NSMakeSize(winSize.width, winSize.height)];
+  [window_ setStyleMask:[window_ styleMask] | NSResizableWindowMask | NSMiniaturizableWindowMask];
+  [window_ setTitle:@"Boxman"];
+  
+  aFrame = [[NSScreen mainScreen] frame];
+  if (aFrame.size.width <= winSize.width || aFrame.size.height <= winSize.height) [window_ zoom:self];
+  [window_ center];
+  [glView_ setFrameSize:NSMakeSize(window_.frame.size.width, window_.frame.size.height-22)];
+  
+  CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"level_prototype"];
+  
+  [director runWithScene:mainScene];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) theApplication
