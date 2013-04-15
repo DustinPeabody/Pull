@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl
+END
+CCControlStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlStepper.h
+END
+CCControlSlider.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlSlider.h
+END
+CCControlHuePicker.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlHuePicker.m
+END
+CCControl.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControl.m
+END
+CCControlSaturationBrightnessPicker.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlSaturationBrightnessPicker.m
+END
+CCControlSlider.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlSlider.m
+END
+CCControlStepper.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlStepper.m
+END
+CCControlPotentiometer.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlPotentiometer.h
+END
+CCControlColourPicker.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlColourPicker.h
+END
+CCControlSwitch.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlSwitch.h
+END
+CCControlPotentiometer.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlPotentiometer.m
+END
+CCControlColourPicker.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlColourPicker.m
+END
+CCControlSwitch.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlSwitch.m
+END
+CCControlButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlButton.h
+END
+CCControlHuePicker.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlHuePicker.h
+END
+CCControl.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControl.h
+END
+CCControlSaturationBrightnessPicker.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlSaturationBrightnessPicker.h
+END
+CCControlButton.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCControlExtension/CCControl/CCControlButton.m
+END

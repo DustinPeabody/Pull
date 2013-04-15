@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip
+END
+ioapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/ioapi.c
+END
+zip.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/zip.c
+END
+unzip.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/unzip.c
+END
+crypt.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/crypt.h
+END
+ioapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/ioapi.h
+END
+mztools.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/mztools.c
+END
+zip.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/zip.h
+END
+unzip.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/unzip.h
+END
+mztools.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/SSZipArchive/minizip/mztools.h
+END

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader
+END
+CCBReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBReader.h
+END
+CCBSequenceProperty.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBSequenceProperty.m
+END
+CCBKeyframe.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBKeyframe.h
+END
+CCNode+CCBRelativePositioning.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCNode+CCBRelativePositioning.h
+END
+CCBReader.m
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBReader.m
+END
+CCBKeyframe.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBKeyframe.m
+END
+CCBSequence.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBSequence.h
+END
+CCBAnimationManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBAnimationManager.h
+END
+CCNode+CCBRelativePositioning.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCNode+CCBRelativePositioning.m
+END
+CCBSequenceProperty.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBSequenceProperty.h
+END
+CCBsequence.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBsequence.m
+END
+CCBAnimationManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/boxman/!svn/ver/4/trunk/Boxman/libs/CCBReader/CCBReader/CCBAnimationManager.m
+END

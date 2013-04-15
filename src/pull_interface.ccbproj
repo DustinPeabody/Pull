@@ -27,7 +27,7 @@
 	<key>onlyPublishCCBs</key>
 	<false/>
 	<key>publishDirectory</key>
-	<string>Published-iOS</string>
+	<string>pull/Resources</string>
 	<key>publishDirectoryAndroid</key>
 	<string>Published-Android</string>
 	<key>publishDirectoryHTML5</key>
@@ -35,9 +35,9 @@
 	<key>publishEnabledAndroid</key>
 	<false/>
 	<key>publishEnabledHTML5</key>
-	<true/>
-	<key>publishEnablediPhone</key>
 	<false/>
+	<key>publishEnablediPhone</key>
+	<true/>
 	<key>publishResolutionHTML5_height</key>
 	<integer>320</integer>
 	<key>publishResolutionHTML5_scale</key>
@@ -47,11 +47,11 @@
 	<key>publishResolution_</key>
 	<true/>
 	<key>publishResolution_hd</key>
-	<true/>
+	<false/>
 	<key>publishResolution_ipad</key>
-	<true/>
+	<false/>
 	<key>publishResolution_ipadhd</key>
-	<true/>
+	<false/>
 	<key>publishResolution_large</key>
 	<true/>
 	<key>publishResolution_medium</key>
@@ -65,7 +65,7 @@
 	<key>publishToZipFile</key>
 	<false/>
 	<key>resourceAutoScaleFactor</key>
-	<integer>4</integer>
+	<integer>2</integer>
 	<key>resourcePaths</key>
 	<array>
 		<dict>

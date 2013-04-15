@@ -12,10 +12,12 @@
 {
 	NSWindow	*window_;
 	CCGLView	*glView_;
+  CCDirectorMac *director_;
 }
 
 @property (assign) IBOutlet NSWindow	*window;
 @property (assign) IBOutlet CCGLView	*glView;
+@property (readonly) CCDirectorMac *director;
 
 - (IBAction)toggleFullScreen:(id)sender;
 
