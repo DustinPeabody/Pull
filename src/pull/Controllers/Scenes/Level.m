@@ -9,8 +9,21 @@
 #import "Level.h"
 #import "PlayerShip.h"
 #import "GameObject.h"
+#import "KeyListener.h"
+
 
 @implementation Level
+
+- (id) init {
+  
+  self = [super init];
+  
+  if (self) {
+    self->_keyListener = [[KeyListener alloc] init];
+  }
+  
+  return self;
+}
 
 -(void) onEnter {
   
@@ -69,6 +82,39 @@
     //remove it
     [self removeChild:game_object cleanup:YES];
   }
+  
+  // Now check ship movement stuff
+  
+  // First, check if there are any keys pressed
+  // if neither horizontal movement keys are pressed
+  if ([_keyListener isKeyPressed:RIGHT] == NO &&
+      [_keyListener isKeyPressed:LEFT] == NO) {
+    
+    //stop the ship's horizontal movment
+    [_player_ship resetHorizontalDirection];
+  }
+  // otherwise, at least one is pressed
+  else {
+    
+    // We want separate if statements so they're independent
+    if ([_keyListener isKeyPressed:RIGHT]) [_player_ship directRight];
+    if ([_keyListener isKeyPressed:LEFT]) [_player_ship directLeft];
+  }
+  
+  // and if neither vertical movement keys are pressed
+  if ([_keyListener isKeyPressed:UP] == NO &&
+      [_keyListener isKeyPressed:DOWN] == NO) {
+    
+    //stop the ship's vertical movement
+    [_player_ship resetVerticalDirection];
+  }
+  // otherwise, at least one is pressed
+  else {
+    
+    // Again, we want them to be separate so they're independent
+    if ([_keyListener isKeyPressed:DOWN]) [_player_ship directDown];
+    if ([_keyListener isKeyPressed:UP]) [_player_ship directUp];
+  }
 }
 -(BOOL) ccKeyDown:(NSEvent *)event
 {
@@ -78,19 +124,12 @@
   if ( [keyPressed length] == 1 )
   {
     uc = [keyPressed characterAtIndex:0];
-    if ( uc == NSLeftArrowFunctionKey )
-    {
-      
-      // left arrow pressed
-      [player_ship directLeft];
-      NSLog(@"Left arrow %f, %f",player_ship.speed.x, player_ship.speed.x);
-    }
     
-    if ( uc == NSRightArrowFunctionKey )
-    {
-      // right arrow pressed
-      [player_ship directRight];
-    }
+    // if any arrow keys are pressed, tell the KeyListener
+    if (uc == NSLeftArrowFunctionKey) [_keyListener keyIsPressed:LEFT];
+    if (uc == NSRightArrowFunctionKey) [_keyListener keyIsPressed:RIGHT];
+    if (uc == NSUpArrowFunctionKey) [_keyListener keyIsPressed:UP];
+    if (uc == NSDownArrowFunctionKey) [_keyListener keyIsPressed:DOWN];
   }
   return YES;
 }
@@ -103,15 +142,12 @@
   if ( [keyReleased length] == 1 )
   {
     uc = [keyReleased characterAtIndex:0];
-    if ( uc == NSLeftArrowFunctionKey )
-    {
-      // left arrow released
-    }
     
-    if ( uc == NSRightArrowFunctionKey )
-    {
-      // right arrow released
-    }
+    // if any arrow keys are unpressed, tell the KeyListener
+    if (uc == NSLeftArrowFunctionKey) [_keyListener keyIsUnpressed:LEFT];
+    if (uc == NSRightArrowFunctionKey) [_keyListener keyIsUnpressed:RIGHT];
+    if (uc == NSUpArrowFunctionKey) [_keyListener keyIsUnpressed:UP];
+    if (uc == NSDownArrowFunctionKey) [_keyListener keyIsUnpressed:DOWN];
   }
   return YES;
 }

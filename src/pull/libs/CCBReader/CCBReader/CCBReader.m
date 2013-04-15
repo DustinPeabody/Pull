@@ -335,6 +335,19 @@
             }
         }
     }
+    else if (type == kCCBPropTypeFloatXY)
+    {
+        float xFloat = [self readFloat];
+        float yFloat = [self readFloat];
+        
+        if (setProp)
+        {
+            NSString* nameX = [NSString stringWithFormat:@"%@X",name];
+            NSString* nameY = [NSString stringWithFormat:@"%@Y",name];
+            [node setValue:[NSNumber numberWithFloat:xFloat] forKey:nameX];
+            [node setValue:[NSNumber numberWithFloat:yFloat] forKey:nameY];
+        }
+    }
     else if (type == kCCBPropTypeDegrees
              || type == kCCBPropTypeFloat)
     {
@@ -707,6 +720,8 @@
         reader->ownerCallbackNames = [ownerCallbackNames retain];
         reader->ownerCallbackNodes = [ownerCallbackNodes retain];
         
+        reader.actionManager.owner = owner;
+        
         CCNode* ccbFile = [reader readFileWithCleanUp:NO actionManagers:actionManagers];
         
         if (ccbFile && reader.actionManager.autoPlaySequenceId != -1)
@@ -770,7 +785,8 @@
         value = [NSNumber numberWithFloat:[self readFloat]];
     }
     else if (type == kCCBPropTypeScaleLock
-             || type == kCCBPropTypePosition)
+             || type == kCCBPropTypePosition
+             || type == kCCBPropTypeFloatXY)
     {
         float a = [self readFloat];
         float b = [self readFloat];
@@ -980,6 +996,79 @@
     return node;
 }
 
+- (BOOL) readCallbackKeyframesForSeq:(CCBSequence*)seq
+{
+    int numKeyframes = [self readIntWithSign:0];
+    
+    if (!numKeyframes) return YES;
+    
+    CCBSequenceProperty* channel = [[[CCBSequenceProperty alloc] init] autorelease];
+    
+    for (int i = 0; i < numKeyframes; i++)
+    {
+        float time = [self readFloat];
+        NSString* callbackName = [self readCachedString];
+        int callbackType = [self readIntWithSign:NO];
+        
+        NSMutableArray* value = [NSMutableArray arrayWithObjects:
+                                 callbackName,
+                                 [NSNumber numberWithInt:callbackType],
+                                 nil];
+        
+        CCBKeyframe* keyframe = [[[CCBKeyframe alloc] init] autorelease];
+        keyframe.time = time;
+        keyframe.value = value;
+        
+        if (jsControlled)
+        {
+            NSString* callbackIdentifier = [NSString stringWithFormat:@"%d:%@", callbackType, callbackName];
+            [actionManager.keyframeCallbacks addObject:callbackIdentifier];
+        }
+        
+        [channel.keyframes addObject:keyframe];
+    }
+    
+    // Assign to sequence
+    seq.callbackChannel = channel;
+    
+    return YES;
+}
+
+- (BOOL) readSoundKeyframesForSeq:(CCBSequence*)seq
+{
+    int numKeyframes = [self readIntWithSign:0];
+    
+    if (!numKeyframes) return YES;
+    
+    CCBSequenceProperty* channel = [[[CCBSequenceProperty alloc] init] autorelease];
+    
+    for (int i = 0; i < numKeyframes; i++)
+    {
+        float time = [self readFloat];
+        NSString* soundFile = [self readCachedString];
+        float pitch = [self readFloat];
+        float pan = [self readFloat];
+        float gain = [self readFloat];
+        
+        NSMutableArray* value = [NSMutableArray arrayWithObjects:
+                                 soundFile,
+                                 [NSNumber numberWithFloat:pitch],
+                                 [NSNumber numberWithFloat:pan],
+                                 [NSNumber numberWithFloat:gain],
+                                 nil];
+        CCBKeyframe* keyframe = [[[CCBKeyframe alloc] init] autorelease];
+        keyframe.time = time;
+        keyframe.value = value;
+        
+        [channel.keyframes addObject:keyframe];
+    }
+    
+    // Assign to sequence
+    seq.soundChannel = channel;
+    
+    return YES;
+}
+
 - (BOOL) readSequences
 {
     NSMutableArray* sequences = actionManager.sequences;
@@ -993,6 +1082,9 @@
         seq.name = [self readCachedString];
         seq.sequenceId = [self readIntWithSign:NO];
         seq.chainedSequenceId = [self readIntWithSign:YES];
+        
+        if (![self readCallbackKeyframesForSeq:seq]) return NO;
+        if (![self readSoundKeyframesForSeq:seq]) return NO;
         
         [sequences addObject:seq];
     }
@@ -1034,6 +1126,7 @@
     
     // Read JS check
     jsControlled = [self readBool];
+    self.actionManager.jsControlled = jsControlled;
     
     return YES;
 }
@@ -1094,6 +1187,7 @@
     owner = [o retain];
     
     self.actionManager.rootContainerSize = parentSize;
+    self.actionManager.owner = owner;
     
     ownerOutletNames = [[NSMutableArray alloc] init];
     ownerOutletNodes = [[NSMutableArray alloc] init];
@@ -1103,7 +1197,7 @@
     NSMutableDictionary* animationManagers = [NSMutableDictionary dictionary];
     CCNode* nodeGraph = [self readFileWithCleanUp:YES actionManagers:animationManagers];
     
-    if (nodeGraph && self.actionManager.autoPlaySequenceId != -1)
+    if (nodeGraph && self.actionManager.autoPlaySequenceId != -1 && !jsControlled)
     {
         // Auto play animations
         [self.actionManager runAnimationsForSequenceId:self.actionManager.autoPlaySequenceId tweenDuration:0];
@@ -1131,7 +1225,7 @@
     
     // Call didLoadFromCCB
     [CCBReader callDidLoadFromCCBForNodeGraph:nodeGraph];
-    
+
     return nodeGraph;
 }
 

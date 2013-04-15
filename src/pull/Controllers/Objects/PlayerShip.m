@@ -31,17 +31,8 @@
 
 
 - (void) update {
-  
-  //calculate the next position
-  CGPoint old_position = self.position;
-  
-  float new_x = old_position.x + (_direction.x*_speed.x);
-  float new_y = old_position.y + (_direction.y*_speed.y);
-  
-  //reset the direction
-  [self resetDirection];
-  
-  self.position = ccp(new_x,new_y);
+  //call the super version of this method
+  [super update];
 }
 
 @end

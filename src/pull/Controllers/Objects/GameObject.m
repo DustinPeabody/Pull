@@ -53,7 +53,13 @@
  * (once per frame)
  */
 -(void) update {
+  //calculate the next position
+  CGPoint old_position = self.position;
   
+  float new_x = old_position.x + (_direction.x*_speed.x);
+  float new_y = old_position.y + (_direction.y*_speed.y);
+  
+  self.position = ccp(new_x,new_y);
 }
 
 /*
@@ -63,7 +69,7 @@
  *          new.direction.x == old.direction.x
  */
 -(void) directUp {
-  self->_direction.y = -1;
+  self->_direction.y = 1;
 }
 
 /*
@@ -83,7 +89,7 @@
  *          new.direction.x == old.direction.x
  */
 -(void) directDown {
-  self->_direction.y = 1;
+  self->_direction.y = -1;
 }
 
 /*
@@ -106,6 +112,26 @@
  */
 -(void) resetDirection {
   self->_direction = ccp(0, 0);
+}
+
+/*
+ * Will reset this GameObject's horizontal direction,
+ * halting all horizontal movment.
+ *
+ * Ensure: new.direction.x == 0
+ */
+-(void) resetHorizontalDirection {
+  self->_direction.x = 0;
+}
+
+/*
+ * Will reset this GameObject's vertical direction,
+ * halting all vertical movemnt.
+ *
+ * Ensure: new.direction.y == 0
+ */
+-(void) resetVerticalDirection {
+  self->_direction.y = 0;
 }
 
 /*
