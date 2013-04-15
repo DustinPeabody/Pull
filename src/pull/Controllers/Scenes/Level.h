@@ -10,8 +10,10 @@
 #import "cocos2d.h"
 
 @class PlayerShip;
+@class KeyListener;
 @interface Level : CCLayer {
-  PlayerShip* player_ship;
+  PlayerShip* _player_ship;
+  KeyListener* _keyListener;
 }
 
 @end

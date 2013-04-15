@@ -32,7 +32,7 @@
 				<key>displayName</key>
 				<string>PlayerShip</string>
 				<key>memberVarAssignmentName</key>
-				<string>player_ship</string>
+				<string>_player_ship</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -44,7 +44,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>106</real>
+							<real>105</real>
 							<real>105</real>
 							<integer>0</integer>
 						</array>
@@ -71,8 +71,6 @@
 						<string>interface/objects/player_ship_prototype.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

@@ -84,6 +84,22 @@
 -(void) resetDirection;
 
 /*
+ * Will reset this GameObject's horizontal direction,
+ * halting all horizontal movment.
+ *
+ * Ensure: new.direction.x == 0
+ */
+-(void) resetHorizontalDirection;
+
+/*
+ * Will reset this GameObject's vertical direction,
+ * halting all vertical movemnt.
+ *
+ * Ensure: new.direction.y == 0
+ */
+-(void) resetVerticalDirection;
+
+/*
  * Will set this GameObject's horizontal and
  * vertical speed to the given speed.
  *
