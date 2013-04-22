@@ -8,6 +8,9 @@
 
 #import "cocos2d.h"
 
+#define WINDOW_WIDTH 480
+#define WINDOW_HEIGHT 700
+
 @interface pullAppDelegate : NSObject <NSApplicationDelegate>
 {
 	NSWindow	*window_;

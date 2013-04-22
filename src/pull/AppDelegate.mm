@@ -17,7 +17,7 @@
 {
   NSRect aFrame = [[NSScreen mainScreen] frame];
   
-  CGSize winSize = CGSizeMake(720,480);
+  CGSize winSize = CGSizeMake(WINDOW_WIDTH,WINDOW_HEIGHT);
   
   CC_DIRECTOR_INIT(winSize);
   [self.window showsResizeIndicator];
@@ -32,12 +32,13 @@
   [window_ setStyleMask:[window_ styleMask] | NSResizableWindowMask | NSMiniaturizableWindowMask];
   [window_ setTitle:@"Boxman"];
   
+//  TODO: Figure out what this does
   aFrame = [[NSScreen mainScreen] frame];
   if (aFrame.size.width <= winSize.width || aFrame.size.height <= winSize.height) [window_ zoom:self];
   [window_ center];
   [glView_ setFrameSize:NSMakeSize(window_.frame.size.width, window_.frame.size.height-22)];
   
-  CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"level_prototype"];
+  CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"level_layer"];
   
   [director runWithScene:mainScene];
 }

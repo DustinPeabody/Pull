@@ -113,7 +113,8 @@
     
     // Again, we want them to be separate so they're independent
     if ([_keyListener isKeyPressed:DOWN]) [_player_ship directDown];
-    if ([_keyListener isKeyPressed:UP]) [_player_ship directUp];
+    if ([_keyListener isKeyPressed:UP])
+      [_player_ship directUp];
   }
 }
 -(BOOL) ccKeyDown:(NSEvent *)event
@@ -149,6 +150,21 @@
     if (uc == NSUpArrowFunctionKey) [_keyListener keyIsUnpressed:UP];
     if (uc == NSDownArrowFunctionKey) [_keyListener keyIsUnpressed:DOWN];
   }
+  return YES;
+}
+
+-(BOOL) ccMouseMoved:(NSEvent *)event {
+  CGPoint mouse_location = ccp(event.locationInWindow.x,event.locationInWindow.y);
+  
+  //if the mouse is to the right of the ship
+  if (_player_ship.position.x - mouse_location.x < 0) {
+    [_player_ship directRight];
+  }
+  //or if the mouse is to the left of the ship
+  else if (_player_ship.position.x - mouse_location.x > 0) {
+    [_player_ship directLeft];
+  }
+  
   return YES;
 }
 
