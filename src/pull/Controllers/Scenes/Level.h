@@ -14,6 +14,8 @@
 @interface Level : CCLayer {
   PlayerShip* _player_ship;
   KeyListener* _keyListener;
+  CCLayer* _hud;
+  CCLayer* _background;
 }
 
 @end
