@@ -19,6 +19,15 @@
   
   CGSize winSize = CGSizeMake(WINDOW_WIDTH,WINDOW_HEIGHT);
   
+  //
+  // CC_DIRECTOR_INIT
+  // 1. It will create an NSWindow with a given size
+  // 2. It will create a MacGLView and it will associate it with the NSWindow
+  // 3. It will register the MacGLView to the CCDirector
+  //
+  // If you want to create a fullscreen window,
+  // you should do it AFTER calling this macro
+  //
   CC_DIRECTOR_INIT(winSize);
   [self.window showsResizeIndicator];
   
@@ -38,7 +47,7 @@
   [window_ center];
   [glView_ setFrameSize:NSMakeSize(window_.frame.size.width, window_.frame.size.height-22)];
   
-  CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"level_layer"];
+  CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"demo_level"];
   
   [director runWithScene:mainScene];
 }

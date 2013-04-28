@@ -46,6 +46,21 @@
 
 - (void) update:(ccTime)delta {
   
+  //Update all children of this level
+  [self updateGameObjects];
+//  TODO: [self checkForCollisions];
+  [self handleGameObjectRemoval];
+  
+  
+  // Now check ship movement stuff
+  [self handleKeyboard];
+  
+}
+
+/*
+ * Will update all GameObject children of this level.
+ */
+- (void) updateGameObjects {
   //Iterate through all objects in the level layer
   CCNode* child;
   
@@ -59,7 +74,17 @@
       [game_object update];
     }
   }
+}
+
+/*
+ * Will check if any child GameObjects are marked for removal,
+ * then remove them.
+ */
+- (void) handleGameObjectRemoval {
   
+  CCNode* child;
+  
+  //Check if any GameObjects are colliding with each other
   //Now check for objects to remove
   NSArray* game_objects_to_remove = [NSArray array];
   
@@ -75,16 +100,19 @@
       }
     }
   }
-
+  
   //for each object in the array
   for (GameObject* game_object in game_objects_to_remove) {
     
     //remove it
     [self removeChild:game_object cleanup:YES];
   }
-  
-  // Now check ship movement stuff
-  
+}
+
+/*
+ * Will check for keyboard input from the user.
+ */
+- (void) handleKeyboard {
   // First, check if there are any keys pressed
   // if neither horizontal movement keys are pressed
   if ([_keyListener isKeyPressed:RIGHT] == NO &&
@@ -117,6 +145,7 @@
       [_player_ship directUp];
   }
 }
+
 -(BOOL) ccKeyDown:(NSEvent *)event
 {
   NSString *keyPressed = [event charactersIgnoringModifiers];
@@ -127,10 +156,10 @@
     uc = [keyPressed characterAtIndex:0];
     
     // if any arrow keys are pressed, tell the KeyListener
-    if (uc == NSLeftArrowFunctionKey) [_keyListener keyIsPressed:LEFT];
-    if (uc == NSRightArrowFunctionKey) [_keyListener keyIsPressed:RIGHT];
-    if (uc == NSUpArrowFunctionKey) [_keyListener keyIsPressed:UP];
-    if (uc == NSDownArrowFunctionKey) [_keyListener keyIsPressed:DOWN];
+    if (uc == NSLeftArrowFunctionKey || uc == 'a') [_keyListener keyIsPressed:LEFT];
+    if (uc == NSRightArrowFunctionKey || uc == 'd') [_keyListener keyIsPressed:RIGHT];
+    if (uc == NSUpArrowFunctionKey || uc == 'w') [_keyListener keyIsPressed:UP];
+    if (uc == NSDownArrowFunctionKey || uc == 's') [_keyListener keyIsPressed:DOWN];
   }
   return YES;
 }
@@ -145,27 +174,28 @@
     uc = [keyReleased characterAtIndex:0];
     
     // if any arrow keys are unpressed, tell the KeyListener
-    if (uc == NSLeftArrowFunctionKey) [_keyListener keyIsUnpressed:LEFT];
-    if (uc == NSRightArrowFunctionKey) [_keyListener keyIsUnpressed:RIGHT];
-    if (uc == NSUpArrowFunctionKey) [_keyListener keyIsUnpressed:UP];
-    if (uc == NSDownArrowFunctionKey) [_keyListener keyIsUnpressed:DOWN];
+    if (uc == NSLeftArrowFunctionKey || uc == 'a') [_keyListener keyIsUnpressed:LEFT];
+    if (uc == NSRightArrowFunctionKey || uc == 'd') [_keyListener keyIsUnpressed:RIGHT];
+    if (uc == NSUpArrowFunctionKey || uc == 'w') [_keyListener keyIsUnpressed:UP];
+    if (uc == NSDownArrowFunctionKey || uc == 's') [_keyListener keyIsUnpressed:DOWN];
   }
   return YES;
 }
 
--(BOOL) ccMouseMoved:(NSEvent *)event {
-  CGPoint mouse_location = ccp(event.locationInWindow.x,event.locationInWindow.y);
-  
-  //if the mouse is to the right of the ship
-  if (_player_ship.position.x - mouse_location.x < 0) {
-    [_player_ship directRight];
-  }
-  //or if the mouse is to the left of the ship
-  else if (_player_ship.position.x - mouse_location.x > 0) {
-    [_player_ship directLeft];
-  }
-  
-  return YES;
-}
+//TODO: Remove this code, not needed
+//-(BOOL) ccMouseMoved:(NSEvent *)event {
+//  CGPoint mouse_location = ccp(event.locationInWindow.x,event.locationInWindow.y);
+//  
+//  //if the mouse is to the right of the ship
+//  if (_player_ship.position.x - mouse_location.x < 0) {
+//    [_player_ship directRight];
+//  }
+//  //or if the mouse is to the left of the ship
+//  else if (_player_ship.position.x - mouse_location.x > 0) {
+//    [_player_ship directLeft];
+//  }
+//  
+//  return YES;
+//}
 
 @end

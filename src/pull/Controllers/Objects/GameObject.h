@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "AppDelegate.h"
 
 @interface GameObject : CCNode {
   //will be used to determine direction of this GameObject's movement

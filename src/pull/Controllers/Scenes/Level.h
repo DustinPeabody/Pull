@@ -16,6 +16,7 @@
   KeyListener* _keyListener;
   CCLayer* _hud;
   CCLayer* _background;
+  
 }
 
 @end

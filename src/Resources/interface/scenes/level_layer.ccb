@@ -32,7 +32,7 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>player_ship</string>
+				<string>_player_ship</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -44,7 +44,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>225</real>
+							<real>223</real>
 							<real>75</real>
 							<integer>0</integer>
 						</array>
@@ -84,9 +84,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>bomb_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -134,9 +134,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>bomb_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -184,9 +184,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>bomb_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -234,9 +234,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -284,9 +284,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -334,9 +334,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -384,9 +384,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -434,9 +434,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -484,9 +484,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -534,9 +534,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -584,9 +584,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -634,9 +634,9 @@
 				<key>displayName</key>
 				<string>vertical_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>vertical_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -684,9 +684,9 @@
 				<key>displayName</key>
 				<string>vertical_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>vertical_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -734,9 +734,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -784,9 +784,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -834,9 +834,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -884,9 +884,9 @@
 				<key>displayName</key>
 				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -934,9 +934,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -984,9 +984,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1034,9 +1034,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1084,9 +1084,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1134,9 +1134,9 @@
 				<key>displayName</key>
 				<string>horizontal_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>horizontal_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1192,9 +1192,9 @@
 				<key>displayName</key>
 				<string>horizontal_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>horizontal_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1250,9 +1250,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1300,9 +1300,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1350,9 +1350,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1400,9 +1400,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1450,9 +1450,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1500,9 +1500,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1550,9 +1550,9 @@
 				<key>displayName</key>
 				<string>standard_enemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1600,9 +1600,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1650,9 +1650,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1700,9 +1700,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1750,9 +1750,9 @@
 				<key>displayName</key>
 				<string>GravityEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>gravity_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1800,9 +1800,9 @@
 				<key>displayName</key>
 				<string>GravityEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>gravity_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1850,9 +1850,9 @@
 				<key>displayName</key>
 				<string>BombEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>bomb_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1900,9 +1900,9 @@
 				<key>displayName</key>
 				<string>BombEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>bomb_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -1912,7 +1912,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>321</real>
+							<real>320</real>
 							<real>1951</real>
 							<integer>0</integer>
 						</array>
@@ -1950,9 +1950,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2000,9 +2000,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2050,9 +2050,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2100,9 +2100,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2150,9 +2150,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2200,9 +2200,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2250,9 +2250,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2300,9 +2300,9 @@
 				<key>displayName</key>
 				<string>StandardEnemy</string>
 				<key>memberVarAssignmentName</key>
-				<string>standard_enemy</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -2342,7 +2342,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>LevelLayer</string>
 		<key>displayName</key>
 		<string>CCLayer</string>
 		<key>memberVarAssignmentName</key>
@@ -2461,6 +2461,13 @@
 		<dict>
 			<key>autoPlay</key>
 			<true/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>10</integer>
+			</dict>
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
@@ -2477,6 +2484,13 @@
 			<real>128</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>9</integer>
+			</dict>
 		</dict>
 	</array>
 	<key>stageBorder</key>
