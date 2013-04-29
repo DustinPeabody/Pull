@@ -249,6 +249,10 @@
 		ADBE23FC1725ECA400E85F7C /* Level.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBE23FB1725ECA400E85F7C /* Level.mm */; };
 		ADBE23FF1725ECB000E85F7C /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBE23FD1725ECB000E85F7C /* GameObject.mm */; };
 		ADBE24001725ECB000E85F7C /* PlayerShip.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBE23FE1725ECB000E85F7C /* PlayerShip.mm */; };
+		ADBEC26A172EE90900C00362 /* PathingAI.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC269172EE90900C00362 /* PathingAI.m */; };
+		ADBEC26D172EF53600C00362 /* CirclePathing.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC26C172EF53600C00362 /* CirclePathing.m */; };
+		ADBEC270172F032D00C00362 /* LinePathing.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC26F172F032C00C00362 /* LinePathing.m */; };
+		ADBEC273172F072D00C00362 /* AnglePathing.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC272172F072D00C00362 /* AnglePathing.m */; };
 		ADC7116416FCA4A100277398 /* fileLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC7114F16FCA4A100277398 /* fileLookup.plist */; };
 		ADE02500171C9405001A081A /* player_ship_prototype.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = ADE024FF171C9405001A081A /* player_ship_prototype.ccbi */; };
 /* End PBXBuildFile section */
@@ -727,6 +731,14 @@
 		ADBE23FB1725ECA400E85F7C /* Level.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Level.mm; path = Controllers/Scenes/Level.mm; sourceTree = "<group>"; };
 		ADBE23FD1725ECB000E85F7C /* GameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameObject.mm; path = Controllers/Objects/GameObject.mm; sourceTree = "<group>"; };
 		ADBE23FE1725ECB000E85F7C /* PlayerShip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PlayerShip.mm; path = Controllers/Objects/PlayerShip.mm; sourceTree = "<group>"; };
+		ADBEC268172EE90900C00362 /* PathingAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathingAI.h; path = Controllers/Objects/AI/PathingAI.h; sourceTree = "<group>"; };
+		ADBEC269172EE90900C00362 /* PathingAI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathingAI.m; path = Controllers/Objects/AI/PathingAI.m; sourceTree = "<group>"; };
+		ADBEC26B172EF53600C00362 /* CirclePathing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CirclePathing.h; path = Controllers/Objects/AI/CirclePathing.h; sourceTree = "<group>"; };
+		ADBEC26C172EF53600C00362 /* CirclePathing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CirclePathing.m; path = Controllers/Objects/AI/CirclePathing.m; sourceTree = "<group>"; };
+		ADBEC26E172F032C00C00362 /* LinePathing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinePathing.h; path = Controllers/Objects/AI/LinePathing.h; sourceTree = "<group>"; };
+		ADBEC26F172F032C00C00362 /* LinePathing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinePathing.m; path = Controllers/Objects/AI/LinePathing.m; sourceTree = "<group>"; };
+		ADBEC271172F072D00C00362 /* AnglePathing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnglePathing.h; path = Controllers/Objects/AI/AnglePathing.h; sourceTree = "<group>"; };
+		ADBEC272172F072D00C00362 /* AnglePathing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnglePathing.m; path = Controllers/Objects/AI/AnglePathing.m; sourceTree = "<group>"; };
 		ADC7114F16FCA4A100277398 /* fileLookup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fileLookup.plist; path = Resources/fileLookup.plist; sourceTree = "<group>"; };
 		ADE024FF171C9405001A081A /* player_ship_prototype.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = player_ship_prototype.ccbi; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -762,20 +774,12 @@
 		AD00C9191707BA94000F9FF9 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				ADBEC267172EE8BA00C00362 /* AI */,
+				ADBEC266172EE88500C00362 /* Enemies */,
 				ADBE23FD1725ECB000E85F7C /* GameObject.mm */,
 				ADBE23FE1725ECB000E85F7C /* PlayerShip.mm */,
 				AD00C91B1707BB15000F9FF9 /* GameObject.h */,
 				AD00C91E1707BC4A000F9FF9 /* PlayerShip.h */,
-				AD875DDF172CA239000FE49D /* BombEnemy.h */,
-				AD875DE0172CA239000FE49D /* BombEnemy.m */,
-				AD875DE2172CA24D000FE49D /* GravityEnemy.h */,
-				AD875DE3172CA24D000FE49D /* GravityEnemy.m */,
-				AD875DE5172CA279000FE49D /* HorizontalEnemy.h */,
-				AD875DE6172CA279000FE49D /* HorizontalEnemy.m */,
-				AD875DE8172CA289000FE49D /* StandardEnemy.h */,
-				AD875DE9172CA289000FE49D /* StandardEnemy.m */,
-				AD875DEB172CA297000FE49D /* VerticalEnemy.h */,
-				AD875DEC172CA297000FE49D /* VerticalEnemy.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1578,6 +1582,38 @@
 			path = "resources-iphone";
 			sourceTree = "<group>";
 		};
+		ADBEC266172EE88500C00362 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+				AD875DDF172CA239000FE49D /* BombEnemy.h */,
+				AD875DE0172CA239000FE49D /* BombEnemy.m */,
+				AD875DE2172CA24D000FE49D /* GravityEnemy.h */,
+				AD875DE3172CA24D000FE49D /* GravityEnemy.m */,
+				AD875DE5172CA279000FE49D /* HorizontalEnemy.h */,
+				AD875DE6172CA279000FE49D /* HorizontalEnemy.m */,
+				AD875DE8172CA289000FE49D /* StandardEnemy.h */,
+				AD875DE9172CA289000FE49D /* StandardEnemy.m */,
+				AD875DEB172CA297000FE49D /* VerticalEnemy.h */,
+				AD875DEC172CA297000FE49D /* VerticalEnemy.m */,
+			);
+			name = Enemies;
+			sourceTree = "<group>";
+		};
+		ADBEC267172EE8BA00C00362 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC268172EE90900C00362 /* PathingAI.h */,
+				ADBEC269172EE90900C00362 /* PathingAI.m */,
+				ADBEC26B172EF53600C00362 /* CirclePathing.h */,
+				ADBEC26C172EF53600C00362 /* CirclePathing.m */,
+				ADBEC26E172F032C00C00362 /* LinePathing.h */,
+				ADBEC26F172F032C00C00362 /* LinePathing.m */,
+				ADBEC271172F072D00C00362 /* AnglePathing.h */,
+				ADBEC272172F072D00C00362 /* AnglePathing.m */,
+			);
+			name = AI;
+			sourceTree = "<group>";
+		};
 		ADC7114E16FCA4A100277398 /* audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -1932,6 +1968,10 @@
 				AD875DE7172CA27A000FE49D /* HorizontalEnemy.m in Sources */,
 				AD875DEA172CA289000FE49D /* StandardEnemy.m in Sources */,
 				AD875DED172CA297000FE49D /* VerticalEnemy.m in Sources */,
+				ADBEC26A172EE90900C00362 /* PathingAI.m in Sources */,
+				ADBEC26D172EF53600C00362 /* CirclePathing.m in Sources */,
+				ADBEC270172F032D00C00362 /* LinePathing.m in Sources */,
+				ADBEC273172F072D00C00362 /* AnglePathing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
