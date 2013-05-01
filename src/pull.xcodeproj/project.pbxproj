@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD041846172F23CC009D7CA4 /* EnemyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD041845172F23CC009D7CA4 /* EnemyObject.m */; };
 		AD0942AF172242500049AB22 /* background_layer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD0942AC172242500049AB22 /* background_layer.ccbi */; };
 		AD0942B0172242500049AB22 /* hud_layer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD0942AD172242500049AB22 /* hud_layer.ccbi */; };
 		AD0942B1172242500049AB22 /* level_layer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD0942AE172242500049AB22 /* level_layer.ccbi */; };
@@ -261,6 +262,8 @@
 		AD00C91B1707BB15000F9FF9 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = Controllers/Objects/GameObject.h; sourceTree = "<group>"; };
 		AD00C91E1707BC4A000F9FF9 /* PlayerShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerShip.h; path = Controllers/Objects/PlayerShip.h; sourceTree = "<group>"; };
 		AD00C9211707C9CD000F9FF9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = Controllers/Scenes/Level.h; sourceTree = "<group>"; };
+		AD041844172F23CC009D7CA4 /* EnemyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyObject.h; path = Controllers/Objects/EnemyObject.h; sourceTree = "<group>"; };
+		AD041845172F23CC009D7CA4 /* EnemyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyObject.m; path = Controllers/Objects/EnemyObject.m; sourceTree = "<group>"; };
 		AD0942AC172242500049AB22 /* background_layer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = background_layer.ccbi; sourceTree = "<group>"; };
 		AD0942AD172242500049AB22 /* hud_layer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = hud_layer.ccbi; sourceTree = "<group>"; };
 		AD0942AE172242500049AB22 /* level_layer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = level_layer.ccbi; sourceTree = "<group>"; };
@@ -1586,6 +1589,8 @@
 			isa = PBXGroup;
 			children = (
 				AD875DDF172CA239000FE49D /* BombEnemy.h */,
+				AD041844172F23CC009D7CA4 /* EnemyObject.h */,
+				AD041845172F23CC009D7CA4 /* EnemyObject.m */,
 				AD875DE0172CA239000FE49D /* BombEnemy.m */,
 				AD875DE2172CA24D000FE49D /* GravityEnemy.h */,
 				AD875DE3172CA24D000FE49D /* GravityEnemy.m */,
@@ -1972,6 +1977,7 @@
 				ADBEC26D172EF53600C00362 /* CirclePathing.m in Sources */,
 				ADBEC270172F032D00C00362 /* LinePathing.m in Sources */,
 				ADBEC273172F072D00C00362 /* AnglePathing.m in Sources */,
+				AD041846172F23CC009D7CA4 /* EnemyObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

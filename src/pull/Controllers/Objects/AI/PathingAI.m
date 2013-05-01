@@ -17,6 +17,7 @@
   
   if (self) {
     //don't alloc/init the starting time until we start moving
+    _starting_time = [[NSDate date] timeIntervalSince1970];
   }
   
   return self;
@@ -30,7 +31,7 @@
  */
 - (CGPoint) position {
   //get the current time
-  double current_time = [[NSDate date] timeIntervalSinceNow];
+  double current_time = [[NSDate date] timeIntervalSince1970];
   //compute elapsed time, in seconds
   double elapsed_seconds = (current_time  - _starting_time);
   

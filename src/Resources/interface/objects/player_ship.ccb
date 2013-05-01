@@ -105,7 +105,7 @@
 						<key>value</key>
 						<array>
 							<real>-19</real>
-							<real>-15</real>
+							<real>-10</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -128,7 +128,7 @@
 						<key>value</key>
 						<array>
 							<real>0.054406017065048218</real>
-							<real>-0.2237798273563385</real>
+							<real>-0.071547448635101318</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -156,8 +156,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>20</real>
+							<real>-1</real>
+							<real>-1</real>
 						</array>
 					</dict>
 					<dict>
@@ -182,7 +182,7 @@
 						<key>type</key>
 						<string>Integer</string>
 						<key>value</key>
-						<integer>250</integer>
+						<integer>100</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -310,8 +310,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>-1</real>
+							<real>-1</real>
 						</array>
 					</dict>
 					<dict>
@@ -356,6 +356,8 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -379,8 +381,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>19</real>
-							<real>-15</real>
+							<real>20</real>
+							<real>-10</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -402,8 +404,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.050775937736034393</real>
-							<real>-0.21073375642299652</real>
+							<real>0.033089842647314072</real>
+							<real>-0.067061617970466614</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -585,8 +587,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>-1</real>
+							<real>-1</real>
 						</array>
 					</dict>
 					<dict>
@@ -740,7 +742,7 @@
 						<key>type</key>
 						<string>Integer</string>
 						<key>value</key>
-						<integer>250</integer>
+						<integer>100</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -914,6 +916,8 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -938,7 +942,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>-25</real>
+							<real>-24</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -960,8 +964,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.05413297563791275</real>
-							<real>-0.11882352828979492</real>
+							<real>0.034196440130472183</real>
+							<real>-0.096389561891555786</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1015,7 +1019,7 @@
 						<key>type</key>
 						<string>Integer</string>
 						<key>value</key>
-						<integer>250</integer>
+						<integer>100</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1143,8 +1147,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>-1</real>
+							<real>-1</real>
 						</array>
 					</dict>
 					<dict>
@@ -1189,6 +1193,8 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1234,8 +1240,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

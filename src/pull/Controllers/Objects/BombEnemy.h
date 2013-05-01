@@ -6,8 +6,11 @@
 //
 //
 
-#import "GameObject.h"
+#import "EnemyObject.h"
+#import "CirclePathing.h"
 
-@interface BombEnemy : GameObject
+@interface BombEnemy : EnemyObject {
+  CirclePathing* _ai;
+}
 
 @end

@@ -13,16 +13,24 @@
  * at the specified rotational velocity.
  */
 @interface CirclePathing : PathingAI {
-  CGPoint _postition;
+  CGPoint _center;
   int _radius;
   double _velocity;
   double _distance;
 }
 
-@property (readonly) CGPoint position;
+@property (readonly) CGPoint center;
 @property (readonly) int radius;
 @property (readonly) double velocity;
 @property (readonly) double distance;
+
+/*
+ * Will initialize this CirclePath with the given variables.
+ */
+- (id) initWithCenter: (CGPoint) center_point
+                angle: (int) starting_angle
+               radius: (int) radius
+             velocity: (double) velocity;
 
 /*
  * Will return the current position of this AI path based on the current time.

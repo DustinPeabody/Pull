@@ -10,7 +10,7 @@
 
 @implementation CirclePathing
 
-@synthesize position = _postition;
+@synthesize center = _center;
 @synthesize radius = _radius;
 @synthesize velocity = _velocity;
 @synthesize distance = _distance;
@@ -20,7 +20,7 @@
   
   if (self) {
     //default values for variables
-    _postition = ccp(0, 0);
+    _center = ccp(0, 0);
     _radius = 0;
     _velocity = 0;
     _distance = 0;
@@ -40,7 +40,7 @@
   self = [self init];
   
   if (self) {
-    _postition = center_point;
+    _center = center_point;
     _distance = asin(starting_angle);
     _radius = radius;
     _velocity = velocity;
@@ -60,8 +60,8 @@
 }
 
 - (CGPoint) computePosition:(double)distance {
-  double x = round(_postition.x + (_radius * cos(distance)));
-  double y = round(_postition.y + (_radius * sin(distance)));
+  double x = round(_center.x + (_radius * cos(distance)));
+  double y = round(_center.y + (_radius * sin(distance)));
   
   return ccp(x, y);
 }
