@@ -11,7 +11,7 @@
 
 @class PlayerShip;
 @class KeyListener;
-@interface Level : CCLayer {
+@interface LevelLayer : CCLayer {
   PlayerShip* _player_ship;
   KeyListener* _keyListener;
   CCLayer* _hud;
