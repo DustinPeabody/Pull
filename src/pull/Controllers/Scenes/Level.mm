@@ -45,35 +45,34 @@
 }
 
 - (void) update:(ccTime)delta {
-  
-  //Update all children of this level
-  [self updateGameObjects];
-//  TODO: [self checkForCollisions];
-  [self handleGameObjectRemoval];
-  
-  
-  // Now check ship movement stuff
-  [self handleKeyboard];
-  
+    
+    //Update all children of this level
+    [self updateGameObjects:delta];
+    
+    // TODO: [self checkForCollisions];
+    [self handleGameObjectRemoval];
+    
+    // Now check ship movement stuff
+    [self handleKeyboard];
 }
 
 /*
  * Will update all GameObject children of this level.
  */
-- (void) updateGameObjects {
-  //Iterate through all objects in the level layer
-  CCNode* child;
-  
-  CCARRAY_FOREACH(self.children, child) {
+- (void) updateGameObjects:(ccTime)delta {
+    //Iterate through all objects in the level layer
+    CCNode* child;
     
-    //if the child is a GameObject
-    if ([child isKindOfClass:[GameObject class]]) {
-      GameObject* game_object = (GameObject*)child;
-      
-      //call its update method
-      [game_object update];
+    CCARRAY_FOREACH(self.children, child) {
+        
+        //if the child is a GameObject
+        if ([child isKindOfClass:[GameObject class]]) {
+            GameObject* game_object = (GameObject*)child;
+            
+            //call its update method
+            [game_object update:delta];
+        }
     }
-  }
 }
 
 /*
