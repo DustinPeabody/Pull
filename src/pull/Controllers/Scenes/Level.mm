@@ -12,7 +12,7 @@
 #import "KeyListener.h"
 
 
-@implementation Level
+@implementation LevelLayer
 
 - (id) init {
   
