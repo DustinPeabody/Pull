@@ -33,6 +33,15 @@
  * Computes the position based upon the parametric line between the start
  * and end points, and the given distance traveled between those points.
  *
+ * @require given.distance != nil && given.distance >= 0.0
+ * @ensure  the correct x, y position is returned
+ */
+- (CGPoint) currentPosition: (ccTime) dt;
+
+/*
+ * Computes the position based upon the parametric line between the start
+ * and end points, and the given distance traveled between those points.
+ *
  * @require given.disatnce != nil && 0.0 <= given.distance <= 1.0
  * @ensure  the correct x, y position is returned
  */

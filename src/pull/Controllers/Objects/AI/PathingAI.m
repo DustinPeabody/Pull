@@ -11,16 +11,18 @@
 @implementation PathingAI
 
 @synthesize starting_time = _starting_time;
+@synthesize current_time = _current_time;
 
 - (id) init {
-  self = [super init];
-  
-  if (self) {
-    //don't alloc/init the starting time until we start moving
-    _starting_time = [[NSDate date] timeIntervalSince1970];
-  }
-  
-  return self;
+    self = [super init];
+    
+    if (self) {
+        //don't alloc/init the starting time until we start moving
+        _starting_time = [[NSDate date] timeIntervalSince1970];
+        _current_time = 0;
+    }
+    
+    return self;
 }
 
 /*
@@ -31,9 +33,9 @@
  */
 - (CGPoint) position {
   //get the current time
-  double current_time = [[NSDate date] timeIntervalSince1970];
+  double current_t = [[NSDate date] timeIntervalSince1970];
   //compute elapsed time, in seconds
-  double elapsed_seconds = (current_time  - _starting_time);
+  double elapsed_seconds = (current_t  - _starting_time);
   
   CGPoint point = [self computePosition:[self computeDistance:elapsed_seconds]];
   

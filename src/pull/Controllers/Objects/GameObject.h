@@ -38,9 +38,10 @@
               andVerticalSpeed: (float) y_speed;
 /*
  * Will update this GameObject's state according to the given environment state.
+ * parameter dt := ccTime type. Time interval since last update.
  * (once per frame)
  */
--(void) update;
+-(void) update:(ccTime) dt;
 
 /*
  * Will set the vertical direction of this GameObject to point upwards.

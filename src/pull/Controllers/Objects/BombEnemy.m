@@ -23,12 +23,12 @@
   return self;
 }
 
-- (void) update {
+- (void) update:(ccTime) dt{
   //if pathing is enabled
   if (self.is_pathing) {
   
     //compute the next position
-    CGPoint new_position = [_ai position];
+    CGPoint new_position = [_ai computePosition:dt];
     
     self.position = new_position;
   }
@@ -44,7 +44,7 @@
   int radius = abs(target.x - self.position.x);
   
   //re-alloc/init the pathing object
-  _ai = [[CirclePathing alloc]initWithCenter:center angle:0 radius:radius velocity:self.speed.x];
+  _ai = [[CirclePathing alloc]initWithCenter:center radius:radius velocity:self.speed.x];
   
   self->_is_pathing = YES;
 }

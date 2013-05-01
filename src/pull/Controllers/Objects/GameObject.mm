@@ -52,7 +52,7 @@
  * Will update this GameObject's state according to the given environment state.
  * (once per frame)
  */
--(void) update {
+-(void) update:(ccTime) dt {
   //calculate the next position
   CGPoint old_position = self.position;
   

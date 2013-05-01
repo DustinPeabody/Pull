@@ -19,11 +19,14 @@
   self = [super init];
   
   if (self) {
-    //default values for variables
-    _start_point = ccp(0,0);
-    _end_point = ccp(0, 0);
-    _velocity = 0;
-    _distance = 0;
+      //default values for variables
+      _start_point = ccp(0,0);
+      _end_point = ccp(0, 0);
+      _distance = 0;
+      _current_time = 0;
+      
+      // velocity should have a default value of 1 for movement to occur
+      _velocity = 1;
   }
   
   return self;
@@ -58,6 +61,8 @@
   return [super position];
 }
 
+// DEPRECATED. Don't use.
+
 - (double) computeDistance:(double)elapsed_seconds {
   // distance traveled = velocity * elapsed time
   double pixels_traveled = _velocity * elapsed_seconds;
@@ -67,6 +72,27 @@
   
   return t;
 }
+
+- (CGPoint) currentPosition:(ccTime) dt {
+    /* parametric equation for line through two points P and Q
+     * P = P + t(Q - P); t => { Real Number }
+     */
+    
+    // compute initial t value
+    _current_time = _current_time + dt;
+    
+    // modify t by velocity 
+    ccTime t = _current_time * _velocity;
+    
+    double dx = t * (_end_point.x - _start_point.x);
+    double dy = t * (_end_point.y - _start_point.y);
+    int current_x = round(_start_point.x + dx);
+    int current_y = round(_start_point.y + dy);
+    
+    return ccp(current_x, current_y);
+}
+
+// DEPRECATED. Don't use.
 
 - (CGPoint) computePosition:(double)distance {
   // parametric equations for a line, given two points
