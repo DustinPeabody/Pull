@@ -49,19 +49,6 @@
   return self;
 }
 
-- (CGPoint) position {
-  return [super position];
-}
-
-// DEPRECATED. Don't use.
-
-- (double) computeDistance:(double)elapsed_seconds {
-  double rev = _velocity * elapsed_seconds;
-  double radians = _distance + (rev * (2 * M_PI));
-  
-  return radians;
-}
-
 - (CGPoint) currentPosition:(ccTime)dt {
     
     // increment elapsed time since start
@@ -86,15 +73,6 @@
     int current_y = round(_center.y + (_radius * sin(theta)));
     
     return ccp(current_x, current_y);
-}
-
-// DEPRECATED. Don't use.
-
-- (CGPoint) computePosition:(double)distance {
-  double x = round(_center.x + (_radius * cos(distance)));
-  double y = round(_center.y + (_radius * sin(distance)));
-  
-  return ccp(x, y);
 }
 
 @end

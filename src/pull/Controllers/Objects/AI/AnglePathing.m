@@ -49,27 +49,4 @@
   return self;
 }
 
-- (CGPoint) position {
-  return [super position];
-}
-
-- (double) computeDistance:(double)elapsed_seconds {
-  // compute distance = time * velocity
-  _distance = elapsed_seconds * _velocity;
-  
-  // return radian global as our T value
-  return _radians;
-}
-
-- (CGPoint) computePosition:(double)distance {
-  // use the circle parametization equation -> constant t value:
-  // x(t) = x0 + rcos(t), 0 <= t <= 2pi
-  // y(t) = y0 + rsin(t), 0 <= t <= 2pi
-  
-  double current_x = round(_starting_point.x + (_radians * cos(distance)));
-  double current_y = round(_starting_point.y + (_radians * sin(distance)));
-  
-  return ccp(current_x, current_y);
-}
-
 @end

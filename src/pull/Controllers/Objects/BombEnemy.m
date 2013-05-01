@@ -17,7 +17,6 @@
     //alloc/init a default circle path
     _ai = [[CirclePathing alloc]init];
     
-    [self startPathingToTarget:ccp(10,5)];
   }
   
   return self;
@@ -28,7 +27,7 @@
   if (self.is_pathing) {
   
     //compute the next position
-    CGPoint new_position = [_ai computePosition:dt];
+    CGPoint new_position = [_ai currentPosition:dt];
     
     self.position = new_position;
   }
@@ -44,7 +43,9 @@
   int radius = abs(target.x - self.position.x);
   
   //re-alloc/init the pathing object
-  _ai = [[CirclePathing alloc]initWithCenter:center radius:radius velocity:self.speed.x];
+  _ai = [[CirclePathing alloc]initWithCenter:center radius:radius velocity:self.speed.x/20];
+  
+//  _ai = [[CirclePathing alloc]initWithCenter:target radius:500 velocity:self.speed.x/2];
   
   self->_is_pathing = YES;
 }

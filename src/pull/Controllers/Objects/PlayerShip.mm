@@ -30,9 +30,9 @@
 //// COMMANDS //////
 
 
-- (void) update {
+- (void) update:(ccTime)dt {
   //call the super version of this method
-  [super update];
+  [super update:dt];
 }
 
 @end

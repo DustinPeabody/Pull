@@ -10,7 +10,7 @@
 #import "PlayerShip.h"
 #import "GameObject.h"
 #import "KeyListener.h"
-
+#import "BombEnemy.h"
 
 @implementation LevelLayer
 
@@ -64,6 +64,12 @@
     CCNode* child;
     
     CCARRAY_FOREACH(self.children, child) {
+      
+      if ([child isKindOfClass:[BombEnemy class]]) {
+        BombEnemy* bomb_enemy = (BombEnemy*)child;
+        
+        [bomb_enemy startPathingToTarget:ccp(20,25)];
+      }
         
         //if the child is a GameObject
         if ([child isKindOfClass:[GameObject class]]) {
