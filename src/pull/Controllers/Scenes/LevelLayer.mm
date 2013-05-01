@@ -6,13 +6,13 @@
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import "Level.h"
+#import "LevelLayer.h"
 #import "PlayerShip.h"
 #import "GameObject.h"
 #import "KeyListener.h"
 
 
-@implementation Level
+@implementation LevelLayer
 
 - (id) init {
   
