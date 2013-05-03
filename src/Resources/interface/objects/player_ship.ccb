@@ -105,7 +105,7 @@
 						<key>value</key>
 						<array>
 							<real>-19</real>
-							<real>-10</real>
+							<real>-8</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -382,7 +382,7 @@
 						<key>value</key>
 						<array>
 							<real>20</real>
-							<real>-10</real>
+							<real>-8</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -916,8 +916,6 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
