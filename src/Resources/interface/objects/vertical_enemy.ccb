@@ -55,8 +55,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -77,7 +77,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>images/enemy_ships/Horizontal.png</string>
+							<string>images/enemy_ships/HorizontalMan.png</string>
 						</array>
 					</dict>
 				</array>
