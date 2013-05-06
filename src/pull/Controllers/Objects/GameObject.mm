@@ -60,12 +60,8 @@
   float new_x = old_position.x + (_direction.x*_speed.x);
   float new_y = old_position.y + (_direction.y*_speed.y);
   
-  //be sure to keep them within the window's bounds though
-  if (0 > new_x) new_x = 0;
-  else if (WINDOW_WIDTH < new_x) new_x = WINDOW_WIDTH;
-  
-  if (0 > new_y) new_y = 0;
-  else if (WINDOW_HEIGHT < new_y) new_y = WINDOW_HEIGHT;
+  //NOTE: We will allow GameObjects to leave the window's bounds.
+  //      Keeping anything on the screen will be a special case.
   
   self.position = ccp(new_x,new_y);
 }

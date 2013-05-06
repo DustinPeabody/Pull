@@ -33,6 +33,18 @@
 - (void) update:(ccTime)dt {
   //call the super version of this method
   [super update:dt];
+  
+  //be sure to keep them within the window's bounds though
+  float pos_x = self.position.x;
+  float pos_y = self.position.y;
+  
+  if (0 > pos_x) pos_x = 0;
+  else if (WINDOW_WIDTH < pos_x) pos_x = WINDOW_WIDTH;
+  
+  if (0 > pos_y) pos_y = 0;
+  else if (WINDOW_HEIGHT < pos_y) pos_y = WINDOW_HEIGHT;
+  
+  self.position = ccp(pos_x, pos_y);
 }
 
 @end

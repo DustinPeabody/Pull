@@ -64,13 +64,14 @@
     CCNode* child;
     
     CCARRAY_FOREACH(self.children, child) {
+
+//      TODO: Remove.
+//      if ([child isKindOfClass:[BombEnemy class]]) {
+//        BombEnemy* bomb_enemy = (BombEnemy*)child;
+//        
+//        [bomb_enemy startPathingToTarget:ccp(20,25)];
+//      }
       
-      if ([child isKindOfClass:[BombEnemy class]]) {
-        BombEnemy* bomb_enemy = (BombEnemy*)child;
-        
-        [bomb_enemy startPathingToTarget:ccp(20,25)];
-      }
-        
         //if the child is a GameObject
         if ([child isKindOfClass:[GameObject class]]) {
             GameObject* game_object = (GameObject*)child;
@@ -169,13 +170,12 @@
   return YES;
 }
 
--(BOOL) ccKeyUp:(NSEvent *)event
-{
+-(BOOL) ccKeyUp:(NSEvent *)event {
+  
   NSString *keyReleased = [event charactersIgnoringModifiers];
   unichar uc = 0;
   
-  if ( [keyReleased length] == 1 )
-  {
+  if ( [keyReleased length] == 1 )   {
     uc = [keyReleased characterAtIndex:0];
     
     // if any arrow keys are unpressed, tell the KeyListener
@@ -187,20 +187,41 @@
   return YES;
 }
 
-//TODO: Remove this code, not needed
-//-(BOOL) ccMouseMoved:(NSEvent *)event {
-//  CGPoint mouse_location = ccp(event.locationInWindow.x,event.locationInWindow.y);
-//  
-//  //if the mouse is to the right of the ship
-//  if (_player_ship.position.x - mouse_location.x < 0) {
-//    [_player_ship directRight];
-//  }
-//  //or if the mouse is to the left of the ship
-//  else if (_player_ship.position.x - mouse_location.x > 0) {
-//    [_player_ship directLeft];
-//  }
-//  
-//  return YES;
-//}
+- (BOOL) ccMouseDown:(NSEvent *)event {
+  //get the location of the mouse click
+  CGPoint mouse_position = [[CCDirector sharedDirector]convertEventToGL:event];
+  
+  //if the mouse is clicked,
+  //check if any enemies were targetted
+  for (CCNode* child in self.children) {
+    
+    //if the child is an Enemy
+    if ([child isKindOfClass:[EnemyObject class]]) {
+      EnemyObject* targetted_enemey = (EnemyObject*)child;
+      
+      //if the mouse click was within the enemy's bounds
+      if (CGRectContainsPoint(targetted_enemey.boundingBox, mouse_position))
+        [targetted_enemey scheduleForRemoval:YES];
+      
+      //now do the same for the enemy's children
+      //NOTE: This is needed for any enemy node with children (e.g All of them)
+      for (CCNode* enemy_child in targetted_enemey.children) {
+        
+        //we need to compute children's bounds in relation to the enemy's position
+        CGRect childs_bounds = CGRectMake(targetted_enemey.position.x + enemy_child.boundingBox.origin.x,
+                                           targetted_enemey.position.y + enemy_child.boundingBox.origin.y,
+                                           enemy_child.boundingBox.size.width,
+                                           enemy_child.boundingBox.size.height);
+        
+        if (CGRectContainsPoint(childs_bounds, mouse_position)) {
+          
+          [targetted_enemey scheduleForRemoval:YES];
+        }
+      }
+    }
+  }
+  
+  return YES; //successfully completed execution
+}
 
 @end

@@ -11,9 +11,13 @@
 @interface EnemyObject : GameObject {
   // will be used to flip the ai on and off
   BOOL _is_pathing;
+  
+  // will be used to determine if the enemy was 'pulled'
+  BOOL _is_pulled;
 }
 
 @property (readonly) BOOL is_pathing;
+@property (readonly) BOOL is_pulled;
 
 /*
  * Will turn the pathing of this object on and
