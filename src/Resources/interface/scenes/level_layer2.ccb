@@ -32,9 +32,9 @@
 				<key>displayName</key>
 				<string>PlayerShip</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_player_ship</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -8201,12 +8201,10 @@
 						<string>interface/objects/standard_enemy.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>LevelLayer2</string>
+		<string>LevelLayer</string>
 		<key>displayName</key>
 		<string>CCLayer</string>
 		<key>memberVarAssignmentName</key>

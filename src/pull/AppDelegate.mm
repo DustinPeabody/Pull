@@ -34,6 +34,7 @@
   CCDirectorMac *director = (CCDirectorMac*) [CCDirector sharedDirector];
   [director setResizeMode:kCCDirectorResize_AutoScale];
   [director setProjection:kCCDirectorProjection2D];
+  [director setDisplayStats:YES];
   
   // Enable "moving" mouse event. Default no.
   [window_ setAcceptsMouseMovedEvents:YES];

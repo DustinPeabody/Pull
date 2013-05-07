@@ -7,6 +7,9 @@
 //
 
 #import "GameObject.h"
+#import "LinePathing.h"
+
+#define ENEMY_SPEED 1
 
 @interface EnemyObject : GameObject {
   // will be used to flip the ai on and off
@@ -23,6 +26,6 @@
  * Will turn the pathing of this object on and
  * make it begin folling its AI controls.
  */
-- (void) startPathingToTarget: (CGPoint) target;
+//- (void) startPathingToTarget: (CGPoint) target;
 
 @end

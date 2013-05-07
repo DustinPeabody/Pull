@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "PlayerShip.h"
+#import "GameObject.h"
+#import "EnemyObject.h"
+#import "BombEnemy.h"
+#import "StandardEnemy.h"
+#import "VerticalEnemy.h"
+#import "HorizontalEnemy.h"
+#import "GravityEnemy.h"
+#import "KeyListener.h"
 
 @class PlayerShip;
 @class KeyListener;

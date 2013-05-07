@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "AppDelegate.h"
+#import "CCBReader.h"
 
 @interface GameObject : CCNode {
   //will be used to determine direction of this GameObject's movement
@@ -36,6 +37,12 @@
  */
 - (id) initWithHorizontalSpeed: (float) x_speed
               andVerticalSpeed: (float) y_speed;
+
+/*
+ * Will be called by CCBReader after the object is given its children.
+ */
+- (void) didLoadFromCCB;
+
 /*
  * Will update this GameObject's state according to the given environment state.
  * parameter dt := ccTime type. Time interval since last update.

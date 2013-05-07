@@ -7,10 +7,6 @@
 //
 
 #import "LevelLayer.h"
-#import "PlayerShip.h"
-#import "GameObject.h"
-#import "KeyListener.h"
-#import "BombEnemy.h"
 
 @implementation LevelLayer
 
@@ -48,10 +44,10 @@
     
     //Update all children of this level
     [self updateGameObjects:delta];
-    
+  
     // TODO: [self checkForCollisions];
     [self handleGameObjectRemoval];
-    
+  
     // Now check ship movement stuff
     [self handleKeyboard];
 }
@@ -60,26 +56,23 @@
  * Will update all GameObject children of this level.
  */
 - (void) updateGameObjects:(ccTime)delta {
-    //Iterate through all objects in the level layer
-    CCNode* child;
-    
-    CCARRAY_FOREACH(self.children, child) {
+  //Iterate through all objects in the level layer
+  for (CCNode* child in self.children) {
 
-//      TODO: Remove.
-//      if ([child isKindOfClass:[BombEnemy class]]) {
-//        BombEnemy* bomb_enemy = (BombEnemy*)child;
-//        
-//        [bomb_enemy startPathingToTarget:ccp(20,25)];
-//      }
+    //if the child is an Enemy
+    if ([child isKindOfClass:[EnemyObject class]]) {
+      EnemyObject* enemy_object = (EnemyObject*)child;
       
-        //if the child is a GameObject
-        if ([child isKindOfClass:[GameObject class]]) {
-            GameObject* game_object = (GameObject*)child;
-            
-            //call its update method
-            [game_object update:delta];
-        }
+      //move it down
+      [enemy_object directDown];
+      
+      //then update it
+      [enemy_object update:delta];
     }
+  }
+  
+  //update the player ship
+  [_player_ship update:delta];
 }
 
 /*

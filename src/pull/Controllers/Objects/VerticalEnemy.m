@@ -10,4 +10,11 @@
 
 @implementation VerticalEnemy
 
+/*
+ * Will be called by CCBReader after the object is given its children.
+ */
+- (void) didLoadFromCCB {
+  [super didLoadFromCCB];
+}
+
 @end

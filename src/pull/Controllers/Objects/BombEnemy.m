@@ -24,15 +24,21 @@
   return self;
 }
 
+- (void) didLoadFromCCB {
+  [super didLoadFromCCB];
+}
+
 - (void) update:(ccTime) dt{
   //if pathing is enabled
-  if (self.is_pathing) {
+//  if (self.is_pathing) {
+//  
+//    //compute the next position
+//    CGPoint new_position = [_ai currentPosition:dt];
+//    
+//    self.position = new_position;
+//  }
   
-    //compute the next position
-    CGPoint new_position = [_ai currentPosition:dt];
-    
-    self.position = new_position;
-  }
+  [super update:dt];
 }
 
 /*

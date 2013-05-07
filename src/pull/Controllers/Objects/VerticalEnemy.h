@@ -6,8 +6,8 @@
 //
 //
 
-#import "GameObject.h"
+#import "EnemyObject.h"
 
-@interface VerticalEnemy : GameObject
+@interface VerticalEnemy : EnemyObject
 
 @end
