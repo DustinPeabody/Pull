@@ -32,6 +32,27 @@
 }
 
 /*
+ * Will be called by CCBReader after the object is given its children.
+ */
+- (void) didLoadFromCCB {
+  //left blank for now
+}
+
+/*
+ * Should be called when the object enters the scene.
+ */
+- (void) onEnter {
+  [super onEnter];
+}
+
+/*
+ * Should be called when the object exits the scene.
+ */
+- (void) onExit {
+  [super onExit];
+}
+
+/*
  * Will return an instance of this GameObject with the given speed.
  *
  * Ensure: self.speed.x == abs(given.x_speed) &&

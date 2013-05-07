@@ -7,8 +7,32 @@
 //
 
 #import "GameObject.h"
+#import "EnemyObject.h"
 
 @interface PlayerShip : GameObject {
+  // will store the player's pulled enemies as ammo
+  NSMutableArray* _ammo_slot;
 }
 
+@property (readonly) NSMutableArray* ammo_slot;
+
+/*
+ * Will return the top-most enemy in the ammo slot.
+ * @ensure  return this.ammo_slot.last
+ */
+- (EnemyObject*) nextEnemy;
+
+/*
+ * Will add the given Enemy to this PlayerShip's ammo slot.
+ * @require this.ammo_slot.count < 4
+ * @ensure  this.ammo_slot.count == old.count + 1
+ */
+- (void) pullEnemy:(EnemyObject*) enemy;
+
+/*
+ * Will remove the top-most ammo from this.ammo_slot.
+ * @require this.ammo_slot.count > 0
+ * @ensure this.ammo_slot.count == old.count - 1
+ */
+- (void) pushEnemy;
 @end

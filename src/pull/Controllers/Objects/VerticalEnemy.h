@@ -13,5 +13,4 @@
 @interface VerticalEnemy : EnemyObject {
     LinePathing* _ai;
 }
-
 @end

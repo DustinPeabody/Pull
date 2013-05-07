@@ -256,6 +256,17 @@
 		ADBEC273172F072D00C00362 /* AnglePathing.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC272172F072D00C00362 /* AnglePathing.m */; };
 		ADC7116416FCA4A100277398 /* fileLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC7114F16FCA4A100277398 /* fileLookup.plist */; };
 		ADE02500171C9405001A081A /* player_ship_prototype.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = ADE024FF171C9405001A081A /* player_ship_prototype.ccbi */; };
+		ADF7FD5A17396656006617C5 /* background_layer2.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD5817396656006617C5 /* background_layer2.ccbi */; };
+		ADF7FD5B17396656006617C5 /* level_layer2.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD5917396656006617C5 /* level_layer2.ccbi */; };
+		ADF7FD5F1739666A006617C5 /* GravityMan.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD5C1739666A006617C5 /* GravityMan.png */; };
+		ADF7FD601739666A006617C5 /* GravityManSpinner.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD5D1739666A006617C5 /* GravityManSpinner.png */; };
+		ADF7FD611739666A006617C5 /* HorizontalMan.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD5E1739666A006617C5 /* HorizontalMan.png */; };
+		ADF7FD6417396682006617C5 /* Spaceshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD6217396682006617C5 /* Spaceshot.jpg */; };
+		ADF7FD6517396682006617C5 /* spaceshot2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD6317396682006617C5 /* spaceshot2.jpg */; };
+		ADF7FD6A17396686006617C5 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD6617396686006617C5 /* background1.png */; };
+		ADF7FD6B17396686006617C5 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD6717396686006617C5 /* background2.png */; };
+		ADF7FD6C17396686006617C5 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD6817396686006617C5 /* background3.png */; };
+		ADF7FD6D17396686006617C5 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7FD6917396686006617C5 /* background4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -744,6 +755,17 @@
 		ADBEC272172F072D00C00362 /* AnglePathing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnglePathing.m; path = Controllers/Objects/AI/AnglePathing.m; sourceTree = "<group>"; };
 		ADC7114F16FCA4A100277398 /* fileLookup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fileLookup.plist; path = Resources/fileLookup.plist; sourceTree = "<group>"; };
 		ADE024FF171C9405001A081A /* player_ship_prototype.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = player_ship_prototype.ccbi; sourceTree = "<group>"; };
+		ADF7FD5817396656006617C5 /* background_layer2.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = background_layer2.ccbi; sourceTree = "<group>"; };
+		ADF7FD5917396656006617C5 /* level_layer2.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = level_layer2.ccbi; sourceTree = "<group>"; };
+		ADF7FD5C1739666A006617C5 /* GravityMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GravityMan.png; sourceTree = "<group>"; };
+		ADF7FD5D1739666A006617C5 /* GravityManSpinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GravityManSpinner.png; sourceTree = "<group>"; };
+		ADF7FD5E1739666A006617C5 /* HorizontalMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HorizontalMan.png; sourceTree = "<group>"; };
+		ADF7FD6217396682006617C5 /* Spaceshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Spaceshot.jpg; sourceTree = "<group>"; };
+		ADF7FD6317396682006617C5 /* spaceshot2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spaceshot2.jpg; sourceTree = "<group>"; };
+		ADF7FD6617396686006617C5 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
+		ADF7FD6717396686006617C5 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		ADF7FD6817396686006617C5 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
+		ADF7FD6917396686006617C5 /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1517,6 +1539,12 @@
 		AD23210D172C7228008A41EC /* ccbResources */ = {
 			isa = PBXGroup;
 			children = (
+				ADF7FD6617396686006617C5 /* background1.png */,
+				ADF7FD6717396686006617C5 /* background2.png */,
+				ADF7FD6817396686006617C5 /* background3.png */,
+				ADF7FD6917396686006617C5 /* background4.png */,
+				ADF7FD6217396682006617C5 /* Spaceshot.jpg */,
+				ADF7FD6317396682006617C5 /* spaceshot2.jpg */,
 				AD23210E172C7228008A41EC /* asplosion.png */,
 				AD23210F172C7228008A41EC /* asplosion2.png */,
 				AD232110172C7228008A41EC /* asplosion3.png */,
@@ -1550,6 +1578,9 @@
 		AD232121172C7228008A41EC /* enemy_ships */ = {
 			isa = PBXGroup;
 			children = (
+				ADF7FD5C1739666A006617C5 /* GravityMan.png */,
+				ADF7FD5D1739666A006617C5 /* GravityManSpinner.png */,
+				ADF7FD5E1739666A006617C5 /* HorizontalMan.png */,
 				AD875DEE172CA433000FE49D /* Vertical.png */,
 				AD232122172C7228008A41EC /* EnemyShip.png */,
 				AD232123172C7228008A41EC /* ExplosionShip.png */,
@@ -1665,6 +1696,8 @@
 		ADC7116216FCA4A100277398 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				ADF7FD5817396656006617C5 /* background_layer2.ccbi */,
+				ADF7FD5917396656006617C5 /* level_layer2.ccbi */,
 				AD23210B172C71F7008A41EC /* demo_level.ccbi */,
 				AD0942B2172243090049AB22 /* level_prototype.ccbi */,
 				AD0942AC172242500049AB22 /* background_layer.ccbi */,
@@ -1772,6 +1805,17 @@
 				AD875DDD172CA12E000FE49D /* standard_enemy.ccbi in Resources */,
 				AD875DDE172CA12E000FE49D /* vertical_enemy.ccbi in Resources */,
 				AD875DEF172CA433000FE49D /* Vertical.png in Resources */,
+				ADF7FD5A17396656006617C5 /* background_layer2.ccbi in Resources */,
+				ADF7FD5B17396656006617C5 /* level_layer2.ccbi in Resources */,
+				ADF7FD5F1739666A006617C5 /* GravityMan.png in Resources */,
+				ADF7FD601739666A006617C5 /* GravityManSpinner.png in Resources */,
+				ADF7FD611739666A006617C5 /* HorizontalMan.png in Resources */,
+				ADF7FD6417396682006617C5 /* Spaceshot.jpg in Resources */,
+				ADF7FD6517396682006617C5 /* spaceshot2.jpg in Resources */,
+				ADF7FD6A17396686006617C5 /* background1.png in Resources */,
+				ADF7FD6B17396686006617C5 /* background2.png in Resources */,
+				ADF7FD6C17396686006617C5 /* background3.png in Resources */,
+				ADF7FD6D17396686006617C5 /* background4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,6 @@
 //
 
 #import "EnemyObject.h"
-#import "LinePathing.h"
-#import "CirclePathing.h"
 
 @interface BombEnemy : EnemyObject {
   LinePathing* _ai;
