@@ -18,6 +18,10 @@
 @property (readonly) CGPoint end_point;
 @property (readonly) double velocity;
 
+- (id) initWithStartingPoint: (CGPoint) starting_point
+                    endPoint: (CGPoint) end_point
+                 andVelocity: (double) velocity;
+
 /*
  * Computes the position based upon the parametric line between the start
  * and end points, and the given distance traveled between those points.

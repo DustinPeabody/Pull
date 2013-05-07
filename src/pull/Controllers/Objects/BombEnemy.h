@@ -7,10 +7,11 @@
 //
 
 #import "EnemyObject.h"
+#import "LinePathing.h"
 #import "CirclePathing.h"
 
 @interface BombEnemy : EnemyObject {
-  CirclePathing* _ai;
+  LinePathing* _ai;
 }
 
 @end
