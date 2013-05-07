@@ -26,6 +26,12 @@
  * Will turn the pathing of this object on and
  * make it begin folling its AI controls.
  */
-//- (void) startPathingToTarget: (CGPoint) target;
+- (void) startPathingToTarget: (CGPoint) target;
+
+/*
+ * Will pull this EnemyObject, removing them from their usual play mode.
+ * @ensure:  self.is_pulled == YES
+ */
+- (void) pull;
 
 @end

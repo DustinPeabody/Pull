@@ -13,6 +13,10 @@
 
 @implementation PlayerShip
 
+@synthesize ammo_slot = _ammo_slot;
+
+//// QUERIES ////
+
 - (id) init {
   
   self = [super init];
@@ -21,9 +25,20 @@
   if (self) {
     //set the speed
     [self setHorizontalSpeed:ShipSpeed andVerticalSpeed:ShipSpeed];
+    //init the ammo slot, making it empty
+    _ammo_slot = [[NSMutableArray alloc]init];
   }
   
   return self;
+}
+
+/*
+ * Will return the top-most enemy in the ammo slot.
+ * @require this.ammo_slot.count > 0
+ * @ensure  return this.ammo_slot.last
+ */
+- (EnemyObject*) nextEnemy {
+  return (EnemyObject*)[[self ammo_slot] lastObject];
 }
 
 
@@ -45,6 +60,24 @@
   else if (WINDOW_HEIGHT < pos_y) pos_y = WINDOW_HEIGHT;
   
   self.position = ccp(pos_x, pos_y);
+}
+
+/*
+ * Will add the given Enemy to this PlayerShip's ammo slot.
+ * @require this.ammo_slot.count < 4
+ * @ensure  this.ammo_slot.count == old.count + 1
+ */
+- (void) pullEnemy:(EnemyObject*) enemy {
+  [self->_ammo_slot addObject:enemy];
+}
+
+/*
+ * Will remove the top-most ammo from this.ammo_slot.
+ * @require this.ammo_slot.count > 0
+ * @ensure this.ammo_slot.count == old.count - 1
+ */
+- (void) pushEnemy {
+  [self->_ammo_slot removeLastObject];
 }
 
 @end

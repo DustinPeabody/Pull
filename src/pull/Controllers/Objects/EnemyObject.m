@@ -31,6 +31,7 @@
  * Will be called by CCBReader after the object is given its children.
  */
 - (void) didLoadFromCCB {
+  [super didLoadFromCCB];
 }
 
 /*
@@ -65,6 +66,14 @@
     //draw it
     [self setVisible:YES];
   }
+}
+
+/*
+ * Will pull this EnemyObject, removing them from their usual play mode.
+ * @ensure:  self.is_pulled == YES
+ */
+- (void) pull {
+  self->_is_pulled = YES;
 }
 
 @end
