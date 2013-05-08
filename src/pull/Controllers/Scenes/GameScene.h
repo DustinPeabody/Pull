@@ -25,6 +25,13 @@
   LevelLayer* _level;
   HudLayer* _hud;
   BackgroundLayer* _background;
+  
+  int _level_number;
+  BOOL _game_over;
 }
+
+@property (readonly) LevelLayer* level;
+@property (readonly) HudLayer* hud;
+@property (readonly) BackgroundLayer* background;
 
 @end

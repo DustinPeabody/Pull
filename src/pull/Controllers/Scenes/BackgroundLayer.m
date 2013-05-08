@@ -11,4 +11,12 @@
 
 @implementation BackgroundLayer
 
+- (void) onEnter {
+  [super onEnter];
+}
+
+- (void) onExit {
+  [super onExit];
+}
+
 @end

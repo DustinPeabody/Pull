@@ -9,6 +9,7 @@
 
 #import "AppDelegate.h"
 #import "CCBReader.h"
+#import "SimpleAudioEngine.h"
 
 @implementation pullAppDelegate
 @synthesize window=window_, glView=glView_, director=director_;
@@ -49,6 +50,8 @@
   [glView_ setFrameSize:NSMakeSize(window_.frame.size.width, window_.frame.size.height-22)];
   
   CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"demo_level"];
+  
+  [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"hot damn.wav"];
   
   [director runWithScene:mainScene];
 }

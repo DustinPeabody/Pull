@@ -249,6 +249,10 @@
 		AD2D915B173AA96E00DA4611 /* vertical_explosion.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9158173AA96E00DA4611 /* vertical_explosion.ccbi */; };
 		AD2D915D173AA97800DA4611 /* BombExplosion.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D915C173AA97800DA4611 /* BombExplosion.ccbi */; };
 		AD2D9160173AAAAC00DA4611 /* Explosion.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2D915F173AAAAC00DA4611 /* Explosion.m */; };
+		AD2D9163173AC4E100DA4611 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2D9162173AC4E100DA4611 /* GameOver.m */; };
+		AD2D9165173AC58000DA4611 /* game_over.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9164173AC58000DA4611 /* game_over.ccbi */; };
+		AD2D9167173ACDC500DA4611 /* level_completed.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9166173ACDC500DA4611 /* level_completed.ccbi */; };
+		AD2D9169173AD02200DA4611 /* hot damn.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9168173AD02200DA4611 /* hot damn.wav */; };
 		AD5451DF1731C7D6009C7EC9 /* LevelLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD5451DE1731C7D6009C7EC9 /* LevelLayer.mm */; };
 		AD55F08F1739E210008A6D57 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55F08E1739E210008A6D57 /* GameScene.m */; };
 		AD875DCF172C9F73000FE49D /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD875DCE172C9F73000FE49D /* BackgroundLayer.m */; };
@@ -757,6 +761,11 @@
 		AD2D915C173AA97800DA4611 /* BombExplosion.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BombExplosion.ccbi; sourceTree = "<group>"; };
 		AD2D915E173AAAAB00DA4611 /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Explosion.h; path = Controllers/Objects/Explosion.h; sourceTree = "<group>"; };
 		AD2D915F173AAAAC00DA4611 /* Explosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Explosion.m; path = Controllers/Objects/Explosion.m; sourceTree = "<group>"; };
+		AD2D9161173AC4E100DA4611 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOver.h; path = Controllers/Objects/GameOver.h; sourceTree = "<group>"; };
+		AD2D9162173AC4E100DA4611 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOver.m; path = Controllers/Objects/GameOver.m; sourceTree = "<group>"; };
+		AD2D9164173AC58000DA4611 /* game_over.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.ccbi; sourceTree = "<group>"; };
+		AD2D9166173ACDC500DA4611 /* level_completed.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = level_completed.ccbi; sourceTree = "<group>"; };
+		AD2D9168173AD02200DA4611 /* hot damn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "hot damn.wav"; path = "pull/Resources/hot damn.wav"; sourceTree = SOURCE_ROOT; };
 		AD5451DD1731C7D6009C7EC9 /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelLayer.h; path = Controllers/Scenes/LevelLayer.h; sourceTree = "<group>"; };
 		AD5451DE1731C7D6009C7EC9 /* LevelLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelLayer.mm; path = Controllers/Scenes/LevelLayer.mm; sourceTree = "<group>"; };
 		AD55F08D1739E210008A6D57 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Controllers/Scenes/GameScene.h; sourceTree = "<group>"; };
@@ -852,6 +861,8 @@
 				AD2D9143173AA72400DA4611 /* VerticalExplosion.m */,
 				AD2D915E173AAAAB00DA4611 /* Explosion.h */,
 				AD2D915F173AAAAC00DA4611 /* Explosion.m */,
+				AD2D9161173AC4E100DA4611 /* GameOver.h */,
+				AD2D9162173AC4E100DA4611 /* GameOver.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1718,6 +1729,7 @@
 		ADC7114E16FCA4A100277398 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				AD2D9168173AD02200DA4611 /* hot damn.wav */,
 			);
 			name = audio;
 			path = Resources/audio;
@@ -1747,6 +1759,8 @@
 		ADC7116016FCA4A100277398 /* objects */ = {
 			isa = PBXGroup;
 			children = (
+				AD2D9166173ACDC500DA4611 /* level_completed.ccbi */,
+				AD2D9164173AC58000DA4611 /* game_over.ccbi */,
 				AD2D9156173AA96E00DA4611 /* bomb_explosion.ccbi */,
 				AD2D9157173AA96E00DA4611 /* horizontal_explosion.ccbi */,
 				AD2D9158173AA96E00DA4611 /* vertical_explosion.ccbi */,
@@ -1897,6 +1911,9 @@
 				AD2D915A173AA96E00DA4611 /* horizontal_explosion.ccbi in Resources */,
 				AD2D915B173AA96E00DA4611 /* vertical_explosion.ccbi in Resources */,
 				AD2D915D173AA97800DA4611 /* BombExplosion.ccbi in Resources */,
+				AD2D9165173AC58000DA4611 /* game_over.ccbi in Resources */,
+				AD2D9167173ACDC500DA4611 /* level_completed.ccbi in Resources */,
+				AD2D9169173AD02200DA4611 /* hot damn.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2108,6 +2125,7 @@
 				AD2D9141173AA70C00DA4611 /* HorizontalExplosion.m in Sources */,
 				AD2D9144173AA72400DA4611 /* VerticalExplosion.m in Sources */,
 				AD2D9160173AAAAC00DA4611 /* Explosion.m in Sources */,
+				AD2D9163173AC4E100DA4611 /* GameOver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

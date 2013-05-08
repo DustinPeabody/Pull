@@ -12,6 +12,8 @@
 
 @implementation LevelLayer
 
+@synthesize player_ship = _player_ship;
+
 - (id) init {
   
   self = [super init];
@@ -76,8 +78,38 @@
     if ([child isKindOfClass:[EnemyObject class]]) {
       EnemyObject* enemy_object = (EnemyObject*)child;
       
-      //check for collisions with player or explosions
-
+      //if the enemy is visible
+      if (enemy_object.visible) {
+        
+        //does the enemy intersect the player
+        if ([self does:enemy_object intersect:_player_ship]) {
+          //the player has been hit
+          [_player_ship hitByEnemy];
+          
+          //replace the enemy with an explosion
+          Explosion* explosion = [self explosionForEnemy:enemy_object];
+          [explosion setPosition:enemy_object.position];
+          [self addChild:explosion];
+          [enemy_object scheduleForRemoval:YES];
+        }
+        
+        //does the enemy intersect an explosion
+        for (CCNode* child in self.children) {
+          //find an explosion
+          if ([child isKindOfClass:[Explosion class]]) {
+            Explosion* explosion = (Explosion*)child;
+            
+            if ([self does:enemy_object intersect:explosion]) {
+              
+              //replace the enemy with an explosion
+              Explosion* enemy_explosion = [self explosionForEnemy:enemy_object];
+              [enemy_explosion setPosition:enemy_object.position];
+              [self addChild:enemy_explosion];
+              [enemy_object scheduleForRemoval:YES];
+            }
+          }
+        }
+      }
       
       //move it down
       [enemy_object directDown];
@@ -196,7 +228,7 @@
   return YES;
 }
 
-- (BOOL) ccMouseDown:(NSEvent *)event {
+- (BOOL) ccRightMouseDown:(NSEvent *)event {
   //get the location of the mouse click
   CGPoint mouse_position = [[CCDirector sharedDirector]convertEventToGL:event];
   
@@ -307,7 +339,7 @@
   }
 }
 
-- (BOOL) ccRightMouseDown:(NSEvent *)event {
+- (BOOL) ccMouseDown:(NSEvent *)event {
   //get the location of the mouse click
   CGPoint mouse_position = [[CCDirector sharedDirector]convertEventToGL:event];
   
@@ -316,24 +348,7 @@
     //get the enemy to be thrown
     EnemyObject* to_throw = _player_ship.nextEnemy;
     
-    CCNode* explosion = [[CCNode alloc]init];
-    
-    //if enemy is bomb
-    if ([to_throw isKindOfClass:[BombEnemy class]]) {
-      explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
-    }
-    else if ([to_throw isKindOfClass:[GravityEnemy class]]) {
-      explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
-    }
-    else if ([to_throw isKindOfClass:[HorizontalEnemy class]]) {
-      explosion = [CCBReader nodeGraphFromFile:@"horizontal_explosion"];
-    }
-    else if ([to_throw isKindOfClass:[StandardEnemy class]]) {
-      explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
-    }
-    else if ([to_throw isKindOfClass:[VerticalEnemy class]]) {
-      explosion = [CCBReader nodeGraphFromFile:@"vertical_explosion"];
-    }
+    Explosion* explosion = [self explosionForEnemy:to_throw];
     
     [explosion setPosition:mouse_position];
     [_player_ship pushEnemy];
@@ -342,6 +357,78 @@
   }
   
   return YES; //succesfully completed execution
+}
+
+- (Explosion*) explosionForEnemy:(EnemyObject*)enemy {
+  CCNode* explosion = [[CCNode alloc]init];
+  
+  //if enemy is bomb
+  if ([enemy isKindOfClass:[BombEnemy class]]) {
+    explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
+  }
+  else if ([enemy isKindOfClass:[GravityEnemy class]]) {
+    explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
+  }
+  else if ([enemy isKindOfClass:[HorizontalEnemy class]]) {
+    explosion = [CCBReader nodeGraphFromFile:@"horizontal_explosion"];
+  }
+  else if ([enemy isKindOfClass:[StandardEnemy class]]) {
+    explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
+  }
+  else if ([enemy isKindOfClass:[VerticalEnemy class]]) {
+    explosion = [CCBReader nodeGraphFromFile:@"vertical_explosion"];
+  }
+  
+  Explosion* casted_explosion = [[Explosion alloc]init];
+  
+  if ([explosion isKindOfClass:[Explosion class]]) {
+    casted_explosion = (Explosion*)explosion;
+  }
+  return casted_explosion;
+}
+
+- (BOOL) does:(CCNode*)node intersect:(CCNode*)other{
+  BOOL result = NO;
+  
+  //check if the base boudning boxes collide
+  CGRect node_box = CGRectMake(node.position.x, node.position.y, node.boundingBox.size.width, node.boundingBox.size.height);
+  CGRect other_box = CGRectMake(other.position.x, other.position.y, other.boundingBox.size.width, other.boundingBox.size.height);
+  
+  if (CGRectIntersectsRect(node_box,other_box)) result = YES;
+  else {
+    //check the children
+    for (CCNode* node_child in node.children) {
+      CGRect node_child_box = CGRectMake(node.position.x + node_child.boundingBox.origin.x, node.position.y + node_child.boundingBox.origin.y, node_child.boundingBox.size.width, node_child.boundingBox.size.height);
+      
+      if (CGRectIntersectsRect(other_box, node_child_box)) result = YES;
+      
+      for (CCNode* other_child in other.children) {
+        CGRect other_child_box = CGRectMake(other.position.x + other_child.boundingBox.origin.x, other.position.y + other_child.boundingBox.origin.y, other_child.boundingBox.size.width, other_child.boundingBox.size.height);
+        
+        if (CGRectIntersectsRect(node_child_box, other_child_box)) result = YES;
+      }
+    }
+  }
+  
+  
+  
+  return result;
+}
+
+- (BOOL) isLevelOver {
+  BOOL result = YES;
+  
+  //check for remaining enemies
+  for (CCNode* child in self.children) {
+    //if the child is an enemy
+    if ([child isKindOfClass:[EnemyObject class]]) {
+      //game is not over
+      result = NO;
+      break;
+    }
+  }
+  
+  return result;
 }
 
 @end

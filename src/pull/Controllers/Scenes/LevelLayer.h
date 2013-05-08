@@ -19,6 +19,7 @@
 #import "HorizontalEnemy.h"
 #import "GravityEnemy.h"
 #import "KeyListener.h"
+#import "Explosion.h"
 
 #define AMMO_HEIGHT 20
 #define AMMO_ONE_X 310
@@ -32,5 +33,9 @@
   PlayerShip* _player_ship;
   KeyListener* _keyListener;
 }
+
+@property (readonly) PlayerShip* player_ship;
+
+- (BOOL) isLevelOver;
 
 @end

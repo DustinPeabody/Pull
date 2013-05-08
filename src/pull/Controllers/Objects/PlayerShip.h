@@ -12,9 +12,12 @@
 @interface PlayerShip : GameObject {
   // will store the player's pulled enemies as ammo
   NSMutableArray* _ammo_slot;
+  
+  BOOL _is_hit;
 }
 
 @property (readonly) NSMutableArray* ammo_slot;
+@property (readonly) BOOL is_hit;
 
 /*
  * Will return the top-most enemy in the ammo slot.
@@ -35,4 +38,7 @@
  * @ensure this.ammo_slot.count == old.count - 1
  */
 - (void) pushEnemy;
+
+- (void) hitByEnemy;
+- (void) hitRegistered;
 @end

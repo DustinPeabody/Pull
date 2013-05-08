@@ -14,6 +14,7 @@
 @implementation PlayerShip
 
 @synthesize ammo_slot = _ammo_slot;
+@synthesize is_hit = _is_hit;
 
 //// QUERIES ////
 
@@ -27,6 +28,7 @@
     [self setHorizontalSpeed:ShipSpeed andVerticalSpeed:ShipSpeed];
     //init the ammo slot, making it empty
     _ammo_slot = [[NSMutableArray alloc]initWithObjects:nil];
+    _is_hit = NO;
   }
   
   return self;
@@ -79,5 +81,15 @@
 - (void) pushEnemy {
   [self->_ammo_slot removeLastObject];
 }
+
+- (void) hitByEnemy {
+  self->_is_hit = YES;
+}
+
+- (void) hitRegistered {
+  self->_is_hit = NO;
+}
+
+
 
 @end

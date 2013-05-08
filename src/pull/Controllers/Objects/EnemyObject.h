@@ -9,7 +9,7 @@
 #import "GameObject.h"
 #import "LinePathing.h"
 
-#define ENEMY_SPEED 1
+#define ENEMY_SPEED 5
 
 @interface EnemyObject : GameObject {
   // will be used to flip the ai on and off
