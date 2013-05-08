@@ -132,8 +132,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>0.5</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -246,6 +246,13 @@
 		<dict>
 			<key>autoPlay</key>
 			<true/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>10</integer>
+			</dict>
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
@@ -262,6 +269,13 @@
 			<real>112.83567047119141</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>9</integer>
+			</dict>
 		</dict>
 	</array>
 	<key>stageBorder</key>

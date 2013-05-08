@@ -407,7 +407,7 @@
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
 	[self drawScene];
-
+//
 	// Process timers and other events
 	[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:nil];
 

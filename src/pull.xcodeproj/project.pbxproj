@@ -233,6 +233,22 @@
 		AD232142172C7228008A41EC /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = AD232127172C7228008A41EC /* rocket.png */; };
 		AD232143172C7228008A41EC /* player_ship_prototype.png in Resources */ = {isa = PBXBuildFile; fileRef = AD232129172C7228008A41EC /* player_ship_prototype.png */; };
 		AD232144172C7228008A41EC /* SHIP.png in Resources */ = {isa = PBXBuildFile; fileRef = AD23212B172C7228008A41EC /* SHIP.png */; };
+		AD2D913E173AA6EB00DA4611 /* BombExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2D913D173AA6EB00DA4611 /* BombExplosion.m */; };
+		AD2D9141173AA70C00DA4611 /* HorizontalExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2D9140173AA70C00DA4611 /* HorizontalExplosion.m */; };
+		AD2D9144173AA72400DA4611 /* VerticalExplosion.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2D9143173AA72400DA4611 /* VerticalExplosion.m */; };
+		AD2D914E173AA95E00DA4611 /* horizontalAsplosion1.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9145173AA95E00DA4611 /* horizontalAsplosion1.png */; };
+		AD2D914F173AA95E00DA4611 /* horizontalAsplosion2.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9146173AA95E00DA4611 /* horizontalAsplosion2.png */; };
+		AD2D9150173AA95E00DA4611 /* horizontalAsplosion3.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9147173AA95E00DA4611 /* horizontalAsplosion3.png */; };
+		AD2D9151173AA95E00DA4611 /* horizontalAsplosion4.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9148173AA95E00DA4611 /* horizontalAsplosion4.png */; };
+		AD2D9152173AA95E00DA4611 /* verticalAsplosion1.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D914A173AA95E00DA4611 /* verticalAsplosion1.png */; };
+		AD2D9153173AA95E00DA4611 /* verticalAsplosion2.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D914B173AA95E00DA4611 /* verticalAsplosion2.png */; };
+		AD2D9154173AA95E00DA4611 /* verticalAsplosion3.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D914C173AA95E00DA4611 /* verticalAsplosion3.png */; };
+		AD2D9155173AA95E00DA4611 /* verticalAsplosion4.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2D914D173AA95E00DA4611 /* verticalAsplosion4.png */; };
+		AD2D9159173AA96E00DA4611 /* bomb_explosion.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9156173AA96E00DA4611 /* bomb_explosion.ccbi */; };
+		AD2D915A173AA96E00DA4611 /* horizontal_explosion.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9157173AA96E00DA4611 /* horizontal_explosion.ccbi */; };
+		AD2D915B173AA96E00DA4611 /* vertical_explosion.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D9158173AA96E00DA4611 /* vertical_explosion.ccbi */; };
+		AD2D915D173AA97800DA4611 /* BombExplosion.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD2D915C173AA97800DA4611 /* BombExplosion.ccbi */; };
+		AD2D9160173AAAAC00DA4611 /* Explosion.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2D915F173AAAAC00DA4611 /* Explosion.m */; };
 		AD5451DF1731C7D6009C7EC9 /* LevelLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD5451DE1731C7D6009C7EC9 /* LevelLayer.mm */; };
 		AD55F08F1739E210008A6D57 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55F08E1739E210008A6D57 /* GameScene.m */; };
 		AD875DCF172C9F73000FE49D /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD875DCE172C9F73000FE49D /* BackgroundLayer.m */; };
@@ -721,6 +737,26 @@
 		AD232127172C7228008A41EC /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
 		AD232129172C7228008A41EC /* player_ship_prototype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_ship_prototype.png; sourceTree = "<group>"; };
 		AD23212B172C7228008A41EC /* SHIP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHIP.png; sourceTree = "<group>"; };
+		AD2D913C173AA6EB00DA4611 /* BombExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BombExplosion.h; path = Controllers/Objects/BombExplosion.h; sourceTree = "<group>"; };
+		AD2D913D173AA6EB00DA4611 /* BombExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BombExplosion.m; path = Controllers/Objects/BombExplosion.m; sourceTree = "<group>"; };
+		AD2D913F173AA70C00DA4611 /* HorizontalExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalExplosion.h; path = Controllers/Objects/HorizontalExplosion.h; sourceTree = "<group>"; };
+		AD2D9140173AA70C00DA4611 /* HorizontalExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizontalExplosion.m; path = Controllers/Objects/HorizontalExplosion.m; sourceTree = "<group>"; };
+		AD2D9142173AA72400DA4611 /* VerticalExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerticalExplosion.h; path = Controllers/Objects/VerticalExplosion.h; sourceTree = "<group>"; };
+		AD2D9143173AA72400DA4611 /* VerticalExplosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerticalExplosion.m; path = Controllers/Objects/VerticalExplosion.m; sourceTree = "<group>"; };
+		AD2D9145173AA95E00DA4611 /* horizontalAsplosion1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horizontalAsplosion1.png; sourceTree = "<group>"; };
+		AD2D9146173AA95E00DA4611 /* horizontalAsplosion2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horizontalAsplosion2.png; sourceTree = "<group>"; };
+		AD2D9147173AA95E00DA4611 /* horizontalAsplosion3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horizontalAsplosion3.png; sourceTree = "<group>"; };
+		AD2D9148173AA95E00DA4611 /* horizontalAsplosion4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horizontalAsplosion4.png; sourceTree = "<group>"; };
+		AD2D914A173AA95E00DA4611 /* verticalAsplosion1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verticalAsplosion1.png; sourceTree = "<group>"; };
+		AD2D914B173AA95E00DA4611 /* verticalAsplosion2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verticalAsplosion2.png; sourceTree = "<group>"; };
+		AD2D914C173AA95E00DA4611 /* verticalAsplosion3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verticalAsplosion3.png; sourceTree = "<group>"; };
+		AD2D914D173AA95E00DA4611 /* verticalAsplosion4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verticalAsplosion4.png; sourceTree = "<group>"; };
+		AD2D9156173AA96E00DA4611 /* bomb_explosion.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = bomb_explosion.ccbi; sourceTree = "<group>"; };
+		AD2D9157173AA96E00DA4611 /* horizontal_explosion.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = horizontal_explosion.ccbi; sourceTree = "<group>"; };
+		AD2D9158173AA96E00DA4611 /* vertical_explosion.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = vertical_explosion.ccbi; sourceTree = "<group>"; };
+		AD2D915C173AA97800DA4611 /* BombExplosion.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BombExplosion.ccbi; sourceTree = "<group>"; };
+		AD2D915E173AAAAB00DA4611 /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Explosion.h; path = Controllers/Objects/Explosion.h; sourceTree = "<group>"; };
+		AD2D915F173AAAAC00DA4611 /* Explosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Explosion.m; path = Controllers/Objects/Explosion.m; sourceTree = "<group>"; };
 		AD5451DD1731C7D6009C7EC9 /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelLayer.h; path = Controllers/Scenes/LevelLayer.h; sourceTree = "<group>"; };
 		AD5451DE1731C7D6009C7EC9 /* LevelLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelLayer.mm; path = Controllers/Scenes/LevelLayer.mm; sourceTree = "<group>"; };
 		AD55F08D1739E210008A6D57 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Controllers/Scenes/GameScene.h; sourceTree = "<group>"; };
@@ -808,6 +844,14 @@
 				ADBE23FE1725ECB000E85F7C /* PlayerShip.mm */,
 				AD00C91B1707BB15000F9FF9 /* GameObject.h */,
 				AD00C91E1707BC4A000F9FF9 /* PlayerShip.h */,
+				AD2D913C173AA6EB00DA4611 /* BombExplosion.h */,
+				AD2D913D173AA6EB00DA4611 /* BombExplosion.m */,
+				AD2D913F173AA70C00DA4611 /* HorizontalExplosion.h */,
+				AD2D9140173AA70C00DA4611 /* HorizontalExplosion.m */,
+				AD2D9142173AA72400DA4611 /* VerticalExplosion.h */,
+				AD2D9143173AA72400DA4611 /* VerticalExplosion.m */,
+				AD2D915E173AAAAB00DA4611 /* Explosion.h */,
+				AD2D915F173AAAAC00DA4611 /* Explosion.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1544,6 +1588,15 @@
 		AD23210D172C7228008A41EC /* ccbResources */ = {
 			isa = PBXGroup;
 			children = (
+				AD2D9145173AA95E00DA4611 /* horizontalAsplosion1.png */,
+				AD2D9146173AA95E00DA4611 /* horizontalAsplosion2.png */,
+				AD2D9147173AA95E00DA4611 /* horizontalAsplosion3.png */,
+				AD2D9148173AA95E00DA4611 /* horizontalAsplosion4.png */,
+				AD2D9149173AA95E00DA4611 /* resources-iphone */,
+				AD2D914A173AA95E00DA4611 /* verticalAsplosion1.png */,
+				AD2D914B173AA95E00DA4611 /* verticalAsplosion2.png */,
+				AD2D914C173AA95E00DA4611 /* verticalAsplosion3.png */,
+				AD2D914D173AA95E00DA4611 /* verticalAsplosion4.png */,
 				ADF7FD6617396686006617C5 /* background1.png */,
 				ADF7FD6717396686006617C5 /* background2.png */,
 				ADF7FD6817396686006617C5 /* background3.png */,
@@ -1621,6 +1674,13 @@
 			path = "resources-iphone";
 			sourceTree = "<group>";
 		};
+		AD2D9149173AA95E00DA4611 /* resources-iphone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "resources-iphone";
+			sourceTree = "<group>";
+		};
 		ADBEC266172EE88500C00362 /* Enemies */ = {
 			isa = PBXGroup;
 			children = (
@@ -1687,6 +1747,9 @@
 		ADC7116016FCA4A100277398 /* objects */ = {
 			isa = PBXGroup;
 			children = (
+				AD2D9156173AA96E00DA4611 /* bomb_explosion.ccbi */,
+				AD2D9157173AA96E00DA4611 /* horizontal_explosion.ccbi */,
+				AD2D9158173AA96E00DA4611 /* vertical_explosion.ccbi */,
 				AD875DD3172CA12E000FE49D /* bomb_enemy.ccbi */,
 				AD875DD4172CA12E000FE49D /* gravity_enemy.ccbi */,
 				AD875DD5172CA12E000FE49D /* horizontal_enemy.ccbi */,
@@ -1701,6 +1764,7 @@
 		ADC7116216FCA4A100277398 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AD2D915C173AA97800DA4611 /* BombExplosion.ccbi */,
 				ADF7FD5817396656006617C5 /* background_layer2.ccbi */,
 				ADF7FD5917396656006617C5 /* level_layer2.ccbi */,
 				AD23210B172C71F7008A41EC /* demo_level.ccbi */,
@@ -1821,6 +1885,18 @@
 				ADF7FD6B17396686006617C5 /* background2.png in Resources */,
 				ADF7FD6C17396686006617C5 /* background3.png in Resources */,
 				ADF7FD6D17396686006617C5 /* background4.png in Resources */,
+				AD2D914E173AA95E00DA4611 /* horizontalAsplosion1.png in Resources */,
+				AD2D914F173AA95E00DA4611 /* horizontalAsplosion2.png in Resources */,
+				AD2D9150173AA95E00DA4611 /* horizontalAsplosion3.png in Resources */,
+				AD2D9151173AA95E00DA4611 /* horizontalAsplosion4.png in Resources */,
+				AD2D9152173AA95E00DA4611 /* verticalAsplosion1.png in Resources */,
+				AD2D9153173AA95E00DA4611 /* verticalAsplosion2.png in Resources */,
+				AD2D9154173AA95E00DA4611 /* verticalAsplosion3.png in Resources */,
+				AD2D9155173AA95E00DA4611 /* verticalAsplosion4.png in Resources */,
+				AD2D9159173AA96E00DA4611 /* bomb_explosion.ccbi in Resources */,
+				AD2D915A173AA96E00DA4611 /* horizontal_explosion.ccbi in Resources */,
+				AD2D915B173AA96E00DA4611 /* vertical_explosion.ccbi in Resources */,
+				AD2D915D173AA97800DA4611 /* BombExplosion.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2028,6 +2104,10 @@
 				AD041846172F23CC009D7CA4 /* EnemyObject.m in Sources */,
 				AD5451DF1731C7D6009C7EC9 /* LevelLayer.mm in Sources */,
 				AD55F08F1739E210008A6D57 /* GameScene.m in Sources */,
+				AD2D913E173AA6EB00DA4611 /* BombExplosion.m in Sources */,
+				AD2D9141173AA70C00DA4611 /* HorizontalExplosion.m in Sources */,
+				AD2D9144173AA72400DA4611 /* VerticalExplosion.m in Sources */,
+				AD2D9160173AAAAC00DA4611 /* Explosion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

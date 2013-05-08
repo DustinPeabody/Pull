@@ -76,6 +76,9 @@
     if ([child isKindOfClass:[EnemyObject class]]) {
       EnemyObject* enemy_object = (EnemyObject*)child;
       
+      //check for collisions with player or explosions
+
+      
       //move it down
       [enemy_object directDown];
       
@@ -197,10 +200,6 @@
   //get the location of the mouse click
   CGPoint mouse_position = [[CCDirector sharedDirector]convertEventToGL:event];
   
-  CCNode* explosion = [CCBReader nodeGraphFromFile:@"player_ship_prototype"];
-  [explosion setPosition:mouse_position];
-//  [self addChild:explosion];
-  
   //if there is room to pull enemies
   if (_player_ship.ammo_slot.count < 4) {
     EnemyObject* pulled_enemy = [self findTargetEnemy:mouse_position];
@@ -208,7 +207,6 @@
     //if an enemy was pulled
     if (pulled_enemy.is_pulled) {
       //give it to the playership
-      [_player_ship pullEnemy:pulled_enemy];
       //and display it
       [self addEnemyToAmmoSlot:pulled_enemy];
     }
@@ -258,6 +256,12 @@
   return targetted_enemy;
 }
 
+/*
+ * Will 'pull' the given EnemyObject, removing them from play and adding them
+ * to the player's ammo slot.
+ * @require given.enemy.is_pulled == NO && player_ship.ammo_slot.size < 4
+ * @ensure  given.enemy.is_pulled == YES && player_ship.ammo_slot.size = old.size + 1
+ */
 - (void) addEnemyToAmmoSlot:(EnemyObject*)enemy {
   CCNode* ammo = [[CCNode alloc]init];
   
@@ -283,20 +287,21 @@
     EnemyObject* ammo_enemy = (EnemyObject*)ammo;
   
     //for first slot
-    if (_player_ship.ammo_slot.count == 1) {
+    if (_player_ship.ammo_slot.count == 0) {
       [ammo_enemy setPosition:ccp(AMMO_ONE_X,AMMO_HEIGHT)];
     }
-    else if (_player_ship.ammo_slot.count == 2) {
+    else if (_player_ship.ammo_slot.count == 1) {
       [ammo_enemy setPosition:ccp(AMMO_TWO_X,AMMO_HEIGHT)];
     }
-    else if (_player_ship.ammo_slot.count == 3) {
+    else if (_player_ship.ammo_slot.count == 2) {
       [ammo_enemy setPosition:ccp(AMMO_THREE_X, AMMO_HEIGHT)];
     }
-    else if (_player_ship.ammo_slot.count == 4) {
+    else if (_player_ship.ammo_slot.count == 3) {
       [ammo_enemy setPosition:ccp(AMMO_FOUR_X, AMMO_HEIGHT)];
     }
     
     [ammo_enemy pull];
+    [_player_ship pullEnemy:ammo_enemy];
     [self.parent addChild:ammo_enemy];
     [self removeChild:enemy];
   }
@@ -304,17 +309,39 @@
 
 - (BOOL) ccRightMouseDown:(NSEvent *)event {
   //get the location of the mouse click
-//  CGPoint mouse_position = [[CCDirector sharedDirector]convertEventToGL:event];
+  CGPoint mouse_position = [[CCDirector sharedDirector]convertEventToGL:event];
+  
+  //if there's any pulled enemies
+  if (_player_ship.ammo_slot.count > 0) {
+    //get the enemy to be thrown
+    EnemyObject* to_throw = _player_ship.nextEnemy;
+    
+    CCNode* explosion = [[CCNode alloc]init];
+    
+    //if enemy is bomb
+    if ([to_throw isKindOfClass:[BombEnemy class]]) {
+      explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
+    }
+    else if ([to_throw isKindOfClass:[GravityEnemy class]]) {
+      explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
+    }
+    else if ([to_throw isKindOfClass:[HorizontalEnemy class]]) {
+      explosion = [CCBReader nodeGraphFromFile:@"horizontal_explosion"];
+    }
+    else if ([to_throw isKindOfClass:[StandardEnemy class]]) {
+      explosion = [CCBReader nodeGraphFromFile:@"bomb_explosion"];
+    }
+    else if ([to_throw isKindOfClass:[VerticalEnemy class]]) {
+      explosion = [CCBReader nodeGraphFromFile:@"vertical_explosion"];
+    }
+    
+    [explosion setPosition:mouse_position];
+    [_player_ship pushEnemy];
+    [self.parent removeChild:to_throw];
+    [self addChild:explosion];
+  }
   
   return YES; //succesfully completed execution
 }
-
-/*
- * Will 'pull' the given EnemyObject, removing them from play and adding them
- * to the player's ammo slot.
- * @require given.enemy.is_pulled == NO && player_ship.ammo_slot.size < 4
- * @ensure  given.enemy.is_pulled == YES && player_ship.ammo_slot.size = old.size + 1
- */
-
 
 @end
