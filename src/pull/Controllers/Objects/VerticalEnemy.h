@@ -7,7 +7,10 @@
 //
 
 #import "EnemyObject.h"
+#import "GameObject.h"
+#import "LinePathing.h"
 
-@interface VerticalEnemy : EnemyObject
-
+@interface VerticalEnemy : EnemyObject {
+    LinePathing* _ai;
+}
 @end

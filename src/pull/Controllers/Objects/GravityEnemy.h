@@ -6,8 +6,11 @@
 //
 //
 
+#import "GameObject.h"
 #import "EnemyObject.h"
+#import "LinePathing.h"
 
-@interface GravityEnemy : EnemyObject
-
+@interface GravityEnemy : EnemyObject {
+    LinePathing* _ai;
+}
 @end
