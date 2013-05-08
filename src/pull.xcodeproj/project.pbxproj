@@ -234,6 +234,7 @@
 		AD232143172C7228008A41EC /* player_ship_prototype.png in Resources */ = {isa = PBXBuildFile; fileRef = AD232129172C7228008A41EC /* player_ship_prototype.png */; };
 		AD232144172C7228008A41EC /* SHIP.png in Resources */ = {isa = PBXBuildFile; fileRef = AD23212B172C7228008A41EC /* SHIP.png */; };
 		AD5451DF1731C7D6009C7EC9 /* LevelLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD5451DE1731C7D6009C7EC9 /* LevelLayer.mm */; };
+		AD55F08F1739E210008A6D57 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55F08E1739E210008A6D57 /* GameScene.m */; };
 		AD875DCF172C9F73000FE49D /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD875DCE172C9F73000FE49D /* BackgroundLayer.m */; };
 		AD875DD2172C9FF0000FE49D /* HudLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD875DD1172C9FF0000FE49D /* HudLayer.m */; };
 		AD875DD9172CA12E000FE49D /* bomb_enemy.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = AD875DD3172CA12E000FE49D /* bomb_enemy.ccbi */; };
@@ -722,6 +723,8 @@
 		AD23212B172C7228008A41EC /* SHIP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHIP.png; sourceTree = "<group>"; };
 		AD5451DD1731C7D6009C7EC9 /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelLayer.h; path = Controllers/Scenes/LevelLayer.h; sourceTree = "<group>"; };
 		AD5451DE1731C7D6009C7EC9 /* LevelLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelLayer.mm; path = Controllers/Scenes/LevelLayer.mm; sourceTree = "<group>"; };
+		AD55F08D1739E210008A6D57 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Controllers/Scenes/GameScene.h; sourceTree = "<group>"; };
+		AD55F08E1739E210008A6D57 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = Controllers/Scenes/GameScene.m; sourceTree = "<group>"; };
 		AD875DCD172C9F73000FE49D /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundLayer.h; path = Controllers/Scenes/BackgroundLayer.h; sourceTree = "<group>"; };
 		AD875DCE172C9F73000FE49D /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundLayer.m; path = Controllers/Scenes/BackgroundLayer.m; sourceTree = "<group>"; };
 		AD875DD0172C9FF0000FE49D /* HudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HudLayer.h; path = Controllers/Scenes/HudLayer.h; sourceTree = "<group>"; };
@@ -818,6 +821,8 @@
 				AD875DCE172C9F73000FE49D /* BackgroundLayer.m */,
 				AD875DD0172C9FF0000FE49D /* HudLayer.h */,
 				AD875DD1172C9FF0000FE49D /* HudLayer.m */,
+				AD55F08D1739E210008A6D57 /* GameScene.h */,
+				AD55F08E1739E210008A6D57 /* GameScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -2022,6 +2027,7 @@
 				ADBEC273172F072D00C00362 /* AnglePathing.m in Sources */,
 				AD041846172F23CC009D7CA4 /* EnemyObject.m in Sources */,
 				AD5451DF1731C7D6009C7EC9 /* LevelLayer.mm in Sources */,
+				AD55F08F1739E210008A6D57 /* GameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

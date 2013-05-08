@@ -1,14 +1,15 @@
 //
-//  Level.h
+//  GameScene.h
 //  pull
 //
-//  Created by Kyle Whittington on 3/30/13.
+//  Created by Kyle Whittington on 5/7/13.
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "HudLayer.h"
+#import "LevelLayer.h"
 #import "BackgroundLayer.h"
 #import "PlayerShip.h"
 #import "GameObject.h"
@@ -20,20 +21,10 @@
 #import "GravityEnemy.h"
 #import "KeyListener.h"
 
-#define AMMO_HEIGHT 20
-#define AMMO_ONE_X 310
-#define AMMO_TWO_X 358
-#define AMMO_THREE_X 408
-#define AMMO_FOUR_X 458
-
-@class PlayerShip;
-@class KeyListener;
-@interface LevelLayer : CCLayer {
-  PlayerShip* _player_ship;
-  KeyListener* _keyListener;
+@interface GameScene : CCLayer {
+  LevelLayer* _level;
   HudLayer* _hud;
+  BackgroundLayer* _background;
 }
-
-- (id) initWithHud:(HudLayer*)hud;
 
 @end

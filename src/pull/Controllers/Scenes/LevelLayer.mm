@@ -7,6 +7,8 @@
 //
 
 #import "LevelLayer.h"
+#import "PlayerShip.h"
+#import "KeyListener.h"
 
 @implementation LevelLayer
 
@@ -15,7 +17,19 @@
   self = [super init];
   
   if (self) {
-    self->_keyListener = [[KeyListener alloc] init];
+    self->_player_ship = [[PlayerShip alloc]init];
+    self->_keyListener = [[KeyListener alloc]init];
+    self->_hud = [[HudLayer alloc]init];
+  }
+  
+  return self;
+}
+
+- (id) initWithHud:(HudLayer*)hud {
+  self = [self init];
+  
+  if (self) {
+    self->_hud = hud;
   }
   
   return self;
@@ -28,7 +42,6 @@
   //Schedule a selector that is called every frame
   [self schedule:@selector(update:)];
   
-  //Make sure the keyboard is enabled
   [self setKeyboardEnabled:YES];
 }
 
@@ -184,37 +197,91 @@
   //get the location of the mouse click
   CGPoint mouse_position = [[CCDirector sharedDirector]convertEventToGL:event];
   
+  CCNode* explosion = [CCBReader nodeGraphFromFile:@"player_ship_prototype"];
+  [explosion setPosition:mouse_position];
+//  [self addChild:explosion];
+  
+  //if there is room to pull enemies
+  if (_player_ship.ammo_slot.count < 4) {
+    EnemyObject* pulled_enemy = [self findTargetEnemy:mouse_position];
+    
+    //if an enemy was pulled
+    if (pulled_enemy.is_pulled) {
+      //give it to the playership
+      [_player_ship pullEnemy:pulled_enemy];
+      //and display it
+      [self addEnemyToAmmoSlot:pulled_enemy];
+    }
+  }
+  
+  return YES; //successfully completed execution
+}
+
+/*
+ * Will find the targeted enemy of the mouse click.
+ */
+- (EnemyObject*) findTargetEnemy:(CGPoint)mouse_position {
+  EnemyObject* targetted_enemy = [[EnemyObject alloc]init];
+  
   //if the mouse is clicked,
   //check if any enemies were targetted
   for (CCNode* child in self.children) {
     
     //if the child is an Enemy
     if ([child isKindOfClass:[EnemyObject class]]) {
-      EnemyObject* targetted_enemey = (EnemyObject*)child;
+      targetted_enemy = (EnemyObject*)child;
       
       //if the mouse click was within the enemy's bounds
-      if (CGRectContainsPoint(targetted_enemey.boundingBox, mouse_position))
-        [targetted_enemey pull];
+      if (CGRectContainsPoint(targetted_enemy.boundingBox, mouse_position))
+        [targetted_enemy pull];
       
       //now do the same for the enemy's children
       //NOTE: This is needed for any enemy node with children (e.g All of them)
-      for (CCNode* enemy_child in targetted_enemey.children) {
+      for (CCNode* enemy_child in targetted_enemy.children) {
         
         //we need to compute children's bounds in relation to the enemy's position
-        CGRect childs_bounds = CGRectMake(targetted_enemey.position.x + enemy_child.boundingBox.origin.x,
-                                           targetted_enemey.position.y + enemy_child.boundingBox.origin.y,
-                                           enemy_child.boundingBox.size.width,
-                                           enemy_child.boundingBox.size.height);
+        CGRect childs_bounds = CGRectMake(targetted_enemy.position.x + enemy_child.boundingBox.origin.x,
+                                          targetted_enemy.position.y + enemy_child.boundingBox.origin.y,
+                                          enemy_child.boundingBox.size.width,
+                                          enemy_child.boundingBox.size.height);
         
-        if (CGRectContainsPoint(childs_bounds, mouse_position)) {
-          
-          [targetted_enemey pull];
-        }
+        if (CGRectContainsPoint(childs_bounds, mouse_position))
+          [targetted_enemy pull];
+        
       }
     }
+    //if an enemy was pulled
+    if (targetted_enemy.is_pulled) break; //break out of the loop
+    
+  }//END OF: for-in loop
+  
+  return targetted_enemy;
+}
+
+- (void) addEnemyToAmmoSlot:(EnemyObject*)enemy {
+  CCNode* ammo_enemy = [[CCNode alloc]init];
+  
+  //if enemy is bomb
+  if ([enemy isKindOfClass:[BombEnemy class]]) {
+    ammo_enemy = [CCBReader nodeGraphFromFile:@"bomb_enemy"];
   }
   
-  return YES; //successfully completed execution
+  //for first slot
+  if (_player_ship.ammo_slot.count == 1) {
+    [ammo_enemy setPosition:ccp(AMMO_ONE_X,AMMO_HEIGHT)];
+  }
+  else if (_player_ship.ammo_slot.count == 2) {
+    [ammo_enemy setPosition:ccp(AMMO_TWO_X,AMMO_HEIGHT)];
+  }
+  else if (_player_ship.ammo_slot.count == 3) {
+    [ammo_enemy setPosition:ccp(AMMO_THREE_X, AMMO_HEIGHT)];
+  }
+  else if (_player_ship.ammo_slot.count == 4) {
+    [ammo_enemy setPosition:ccp(AMMO_FOUR_X, AMMO_HEIGHT)];
+  }
+  
+  [self.parent addChild:ammo_enemy];
+  [self removeChild:enemy];
 }
 
 - (BOOL) ccRightMouseDown:(NSEvent *)event {

@@ -32,7 +32,7 @@
 				<key>displayName</key>
 				<string>glossy_button_blank_black_rectangle</string>
 				<key>memberVarAssignmentName</key>
-				<string>_pull_box</string>
+				<string>_ammo_display</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -44,8 +44,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>411</real>
-							<real>21</real>
+							<real>387</real>
+							<real>20</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -67,7 +67,7 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.27941223978996277</real>
+							<real>0.37900000810623169</real>
 							<real>0.2338668555021286</real>
 							<false/>
 							<integer>0</integer>
@@ -91,6 +91,14 @@
 							<string></string>
 							<string>images/ccbResources/glossy_button_blank_black_rectangle.png</string>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>opacity</string>
+						<key>type</key>
+						<string>Byte</string>
+						<key>value</key>
+						<integer>50</integer>
 					</dict>
 					<dict>
 						<key>name</key>

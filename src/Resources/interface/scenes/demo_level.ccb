@@ -32,9 +32,9 @@
 				<key>displayName</key>
 				<string>background_layer</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_background</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -67,8 +67,6 @@
 						<string>interface/scenes/background_layer.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -80,9 +78,9 @@
 				<key>displayName</key>
 				<string>Level</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_level</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -118,9 +116,9 @@
 				<key>displayName</key>
 				<string>hud_layer</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_hud</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -148,7 +146,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>GameScene</string>
 		<key>displayName</key>
 		<string>CCLayer</string>
 		<key>memberVarAssignmentName</key>

@@ -26,7 +26,7 @@
     //set the speed
     [self setHorizontalSpeed:ShipSpeed andVerticalSpeed:ShipSpeed];
     //init the ammo slot, making it empty
-    _ammo_slot = [[NSMutableArray alloc]init];
+    _ammo_slot = [[NSMutableArray alloc]initWithObjects:nil];
   }
   
   return self;
