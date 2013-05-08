@@ -32,6 +32,9 @@
         
         self.position = new_position;
     }
+    else {
+      [super update:dt];
+    }
 }
 
 /*

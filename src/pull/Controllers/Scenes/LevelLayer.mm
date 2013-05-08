@@ -19,21 +19,21 @@
   if (self) {
     self->_player_ship = [[PlayerShip alloc]init];
     self->_keyListener = [[KeyListener alloc]init];
-    self->_hud = [[HudLayer alloc]init];
+//    self->_hud = [[HudLayer alloc]init];
   }
   
   return self;
 }
 
-- (id) initWithHud:(HudLayer*)hud {
-  self = [self init];
-  
-  if (self) {
-    self->_hud = hud;
-  }
-  
-  return self;
-}
+//- (id) initWithHud:(HudLayer*)hud {
+//  self = [self init];
+//
+//  if (self) {
+//    self->_hud = hud;
+//  }
+//
+//  return self;
+//}
 
 -(void) onEnter {
   
@@ -259,29 +259,47 @@
 }
 
 - (void) addEnemyToAmmoSlot:(EnemyObject*)enemy {
-  CCNode* ammo_enemy = [[CCNode alloc]init];
+  CCNode* ammo = [[CCNode alloc]init];
   
   //if enemy is bomb
   if ([enemy isKindOfClass:[BombEnemy class]]) {
-    ammo_enemy = [CCBReader nodeGraphFromFile:@"bomb_enemy"];
+    ammo = [CCBReader nodeGraphFromFile:@"bomb_enemy"];
+  }
+  else if ([enemy isKindOfClass:[GravityEnemy class]]) {
+    ammo = [CCBReader nodeGraphFromFile:@"gravity_enemy"];
+  }
+  else if ([enemy isKindOfClass:[HorizontalEnemy class]]) {
+    ammo = [CCBReader nodeGraphFromFile:@"horizontal_enemy"];
+  }
+  else if ([enemy isKindOfClass:[StandardEnemy class]]) {
+    ammo = [CCBReader nodeGraphFromFile:@"standard_enemy"];
+  }
+  else if ([enemy isKindOfClass:[VerticalEnemy class]]) {
+    ammo = [CCBReader nodeGraphFromFile:@"vertical_enemy"];
   }
   
-  //for first slot
-  if (_player_ship.ammo_slot.count == 1) {
-    [ammo_enemy setPosition:ccp(AMMO_ONE_X,AMMO_HEIGHT)];
-  }
-  else if (_player_ship.ammo_slot.count == 2) {
-    [ammo_enemy setPosition:ccp(AMMO_TWO_X,AMMO_HEIGHT)];
-  }
-  else if (_player_ship.ammo_slot.count == 3) {
-    [ammo_enemy setPosition:ccp(AMMO_THREE_X, AMMO_HEIGHT)];
-  }
-  else if (_player_ship.ammo_slot.count == 4) {
-    [ammo_enemy setPosition:ccp(AMMO_FOUR_X, AMMO_HEIGHT)];
-  }
+  if ([ammo isKindOfClass:[EnemyObject class]]) {
+    //cast as enemy
+    EnemyObject* ammo_enemy = (EnemyObject*)ammo;
   
-  [self.parent addChild:ammo_enemy];
-  [self removeChild:enemy];
+    //for first slot
+    if (_player_ship.ammo_slot.count == 1) {
+      [ammo_enemy setPosition:ccp(AMMO_ONE_X,AMMO_HEIGHT)];
+    }
+    else if (_player_ship.ammo_slot.count == 2) {
+      [ammo_enemy setPosition:ccp(AMMO_TWO_X,AMMO_HEIGHT)];
+    }
+    else if (_player_ship.ammo_slot.count == 3) {
+      [ammo_enemy setPosition:ccp(AMMO_THREE_X, AMMO_HEIGHT)];
+    }
+    else if (_player_ship.ammo_slot.count == 4) {
+      [ammo_enemy setPosition:ccp(AMMO_FOUR_X, AMMO_HEIGHT)];
+    }
+    
+    [ammo_enemy pull];
+    [self.parent addChild:ammo_enemy];
+    [self removeChild:enemy];
+  }
 }
 
 - (BOOL) ccRightMouseDown:(NSEvent *)event {

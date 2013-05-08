@@ -31,9 +31,6 @@
 @interface LevelLayer : CCLayer {
   PlayerShip* _player_ship;
   KeyListener* _keyListener;
-  HudLayer* _hud;
 }
-
-- (id) initWithHud:(HudLayer*)hud;
 
 @end

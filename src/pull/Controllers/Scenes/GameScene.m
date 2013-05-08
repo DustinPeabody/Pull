@@ -16,7 +16,7 @@
   
   if (self) {
     self->_hud = [[HudLayer alloc]init];
-    self->_level = [[LevelLayer alloc]initWithHud:_hud];
+    self->_level = [[LevelLayer alloc]init];
     self->_background = [[BackgroundLayer alloc]init];
   }
   
@@ -42,6 +42,16 @@
 
 - (void) update:(ccTime)delta {
   [super update:delta];
+  
+  for (CCNode* child in self.children) {
+    if ([child isKindOfClass:[EnemyObject class]]) {
+      EnemyObject* enemy = (EnemyObject*)child;
+
+      if (enemy.is_pulled) {
+        [enemy setVisible:YES];
+      }
+    }
+  }
 }
 
 @end
